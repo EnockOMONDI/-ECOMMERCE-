@@ -1,5 +1,9 @@
 
 # Create your views here.
+'''
+this will list all the products or filter the products by selected category and product detail.
+
+'''
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 
