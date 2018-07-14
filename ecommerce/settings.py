@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -85,8 +86,6 @@ DATABASES = {
     'PASSWORD':'Aggreyomondi90',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -111,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Africa/Nairobi'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
