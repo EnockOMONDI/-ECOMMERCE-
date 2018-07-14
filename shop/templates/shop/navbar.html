@@ -1,4 +1,4 @@
-{% load bootstrap4 %}
+
 {% load static %}
 <!-- log in sign up ------------------------------------>
 <nav>
@@ -159,7 +159,7 @@
                   {% if cart|length > 0 %}
                       My Shopping Order:
                       <a href="{% url "cart:cart_detail" %}" >
-                          {{ totail_items }} <button type="button"  class="btn aqua-gradient btn-rounded">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+                          {{ totail_items }} <button class="btn primary btn-rounded">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
                       </a>
                       {% else %}
                       Your cart is empty.  {{ totail_items }}  {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
