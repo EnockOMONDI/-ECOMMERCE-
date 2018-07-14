@@ -8,15 +8,12 @@
         <li class="dropdown">
         {% if request.user.is_authenticated %}
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff">Welcome  {{ request.user.username }}<b class="caret"></b></a>
-
-         <ul class="dropdown-menu">
+        <ul class="dropdown-menu">
           <li><a href="">logout</a></li>
             {% else %}
-            <div class="loginlogin">
        <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
 		  	<li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
            {% endif %}
-           </div>
       </li>
 		</ul>
 	</div>
