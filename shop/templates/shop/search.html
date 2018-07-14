@@ -1,0 +1,31 @@
+
+{%extends 'shop/navbar.html' %}
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    {% if categories%}
+      <h2>Found {{ categories|length }} of searched term {{message}}.</h2>
+    {% else %}
+      <h2> BUMMER!! nothing found in searched category {{message}}.</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+
+  {% if categories %}
+    {% for category in categories %}
+    <div class="col-xs-4 col-sm-4 col-md-4 mt-5">
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{category.image.url}}" class="img-responsive" alt="{{category.image_name}}">
+        <div class="card-body">
+            <a href="{% url 'image' category.id %}" class="card-link float-right">view more &rarr;</a>
+        </div>
+      </div>
+  </div>
+
+  {% endfor %}
+{% endif %}
+</div>
+{% endblock %}

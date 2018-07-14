@@ -23,8 +23,8 @@
 <div class="header-bot">
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<div class="col-md-4 header-middle">
-			<form action="#" method="post">
-					<input type="search" name="search" placeholder="Search item..." required="">
+			<form action="{% url 'search_results' %}"role="search">
+					<input type="search" name="search" placeholder="Search item by category..." required="">
 					<input type="submit" value=" ">
 				<div class="clearfix"></div>
 			</form>
