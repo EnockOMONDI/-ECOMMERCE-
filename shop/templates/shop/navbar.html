@@ -23,7 +23,7 @@
 <div class="header-bot">
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<div class="col-md-4 header-middle">
-			<form action="{% url 'search_results' %}"role="search">
+			 <form action=""role="search">
 					<input type="search" name="search" placeholder="Search item by category..." required="">
 					<input type="submit" value=" ">
 				<div class="clearfix"></div>
@@ -151,9 +151,26 @@
 					</li>
 					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:product_list' %}">Contact</a></li>
 				  </ul>
+          <div class="top_nav_right">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+
+              {% with totail_items=cart|length %}
+                  {% if cart|length > 0 %}
+                      My Shopping Order:
+                      <a href="{% url "cart:cart_detail" %}" >
+                          {{ totail_items }} <button type="success" name="button">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+                      </a>
+                      {% else %}
+                      Your cart is empty.
+                  {% endif %}
+              {% endwith %}
+    <!-- <button class="w3view-cart" href="{% url "cart:cart_detail" %}" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                  -->
+                  </div>
+          </div>
 				</div>
 			  </div>
-			</nav>
 		</div>
-  </div>
+
+
 </nav>
