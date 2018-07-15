@@ -81,21 +81,24 @@ label{
     display: inline-block;
     margin: 1em 0 0;
     float: right;
+
+
 }
 .social-nav li {
     display: inline-block;
-    margin: 0 6px;
+    margin: 0 10px;
 }
 .social-nav a {
     display: inline-block;
     float: none;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    line-height: 30px;
-    background: #000;
+    line-height: 50px;
+		margin: 1.1rem;
+
     position: relative;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -103,7 +106,7 @@ label{
     transition: 0.5s;
 }
 .model-3d-0 a {
-    background:#5C5B5B;
+
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
@@ -141,18 +144,7 @@ label{
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-a.twitter .front {
-    background: #2fdab8;
-}
-a.facebook .front {
-    background: #2fdab8;
-}
-a.instagram .front {
-    background: #2fdab8;
-}
-a.pinterest .front {
-    background: #2fdab8 ;
-}
+
 .twitter .back,.facebook .back,.instagram .back,.pinterest .back{
     background:#fff;
 }
@@ -184,18 +176,7 @@ a.pinterest .front {
 }
 /*--social icons--*/
 /* Brand Colours */
-.facebook{
-    background:  #2fdab8;
-}
-.twitter{
-    background:  #2fdab8
-}
-.google-plus{
-	background:# #2fdab8;
-}
-.rss{
-	background: #2fdab8;
-}
+
 .social-icon-w3-agile {
     width: 25%;
     float: left;
