@@ -31,5 +31,13 @@ def product_detail(request, id, slug):
 def home(request):
   return render(request, 'shop/product/home.html')
 
+
 def about(request):
   return render(request, 'shop/product/about.html')
+
+def mens(request):
+  return render(request, 'shop/product/mens.html')
+
+
+def womens(request):
+   return render(request, 'shop/product/womens.html')
