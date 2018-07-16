@@ -1,4 +1,4 @@
-/* .blog-header {
+ .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -15,10 +15,10 @@
 blog-main {
   font-size: 18px;
   line-height: 1.5;
-} */
+}
 
 /* Sidebar modules for boxing content */
-/* .sidebar-module {
+ .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
 }
@@ -42,4 +42,4 @@ blog-main {
 .blog-post-meta {
   margin-bottom: 20px;
   color: #999;
-} */
+} 
