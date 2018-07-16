@@ -28,5 +28,8 @@ def product_detail(request, id, slug):
     }
     return render(request, 'shop/product/detail.html', context)
 
-def welcome(request):
-  return render(request, 'shop/product/welcome.html')
+def home(request):
+  return render(request, 'shop/product/home.html')
+
+def home(request):
+  return render(request, 'shop/product/home.html')
