@@ -1,0 +1,36 @@
+<!--/tab_two-->
+        <div class="tab2">
+          {% for product in products %}
+           <div class="col-md-5 product-men">
+            <div class="men-pro-item simpleCart_shelfItem">
+              <div class="men-thumb-item">
+                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}"  alt="" class="pro-image-front">
+                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}"  alt="" class="pro-image-back">
+                  <div class="men-cart-pro">
+                    <div class="inner-men-cart-pro">
+                      <a href="{{ product.get_absolute_url }}" class="link-product-add-cart">Quick View</a>
+                    </div>
+                  </div>
+                  <span class="product-new-top">New</span>
+
+              </div>
+              <div class="item-info-product ">
+                <h4><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h4>
+                <div class="info-product-price">
+                  <span class="item_price">Kshs. {{ product.price }}</span>
+
+                </div>
+                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                          <form action="{% url "cart:cart_add" product.id %}" method="post">
+                            {% csrf_token %}
+                            {{ cart_product_form }}
+                            <fieldset>
+                              <input type="submit" name="submit" value="Add to cart" class="button" />
+                            </fieldset>
+                          </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+  {% endfor %}
