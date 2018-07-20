@@ -38,6 +38,8 @@ def about(request):
 def mens(request):
   return render(request, 'shop/product/mens.html')
 
+def contact(request):
+  return render(request, 'shop/product/contact.html')
 
 def womens(request):
    return render(request, 'shop/product/womens.html')
