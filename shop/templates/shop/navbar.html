@@ -92,6 +92,7 @@
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{% url 'shop:home' %}">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:product_list' %}">Shop</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:about' %}">about</a></li>
 					<li class="dropdown menu__item">
 						<a href="{% url 'shop:product_list' %}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
@@ -164,7 +165,7 @@
 									<li><a href="{% url 'shop:product_list' %}">Decor & Beauty</a></li>
 								</ul>
 					</li>
-					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:product_list' %}">Contact</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:contact' %}">Contact</a></li>
 				  </ul>
           <div class="top_nav_right">
             <div class="box_1">
