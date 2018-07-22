@@ -7,13 +7,13 @@
 
 {% block content %}
     <div class="container">
-        <div class="row" style="margin-top: 6%">
-        <h2>Your Shopping Cart
-            <span class="badge pull-right">
+        <div class="row" style="margin-top: 1%">
+        <h3>
+            <span class=>
                 {% with totail_items=cart|length %}
                     {% if cart|length > 0 %}
                         My Shopping Order:
-                        <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
+                        <a href="{% url "cart:cart_detail" %}" style="color: #2fdab8">
                             {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
                         </a>
                         {% else %}
@@ -21,9 +21,9 @@
                     {% endif %}
                 {% endwith %}
             </span>
-        </h2>
+        </h3>
             <table class="table table-striped table-hover">
-                <thead style="background-color: #5AC8FA">
+                <thead style="background-color: #2fdab8">
                     <tr>
                         <th>Image</th>
                         <th>Product</th>
@@ -52,14 +52,14 @@
                                 </form>
                             </td>
                             <td>
-                                <a href="{% url "cart:cart_remove" product.id %}">Remove</a>
+                                <a href="{% url "cart:cart_remove" product.id %}">Remove Item</a>
                             </td>
                             <td>kshs. {{ item.price }}</td>
                             <td>kshs. {{ item.total_price }}</td>
                         </tr>
                     {% endwith %}
                 {% endfor %}
-                <tr style="background-color: #5AC8FA">
+                <tr style="background-color: #2fdab8">
                     <td><b>Total</b></td>
                     <td colspan="4"></td>
                     <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
@@ -67,9 +67,10 @@
                 </tbody>
             </table>
         <p class="text-right">
-            <a href="{% url "shop:product_list" %}" class="btn btn-default">Continue Shopping</a>
-            <a href="{% url "orders:order_create" %}" class="btn btn-primary">Checkout</a>
+            <a href="{% url "shop:product_list" %}" class="btn btn-danger">Continue Shopping</a>
+            <a href="{% url "orders:order_create" %}" class="btn btn-info">Checkout</a>
         </p>
         </div>
     </div>
+
 {% endblock %}
