@@ -1,3 +1,4 @@
+{% load static %}
 <nav>
 
 <!--  header Login signup nav  ----------------------------------------->
@@ -48,22 +49,22 @@
 						<ul class="social-nav model-3d-0 footer-social ">
 						                                   <li class="share"></li>
 								  <li><a href="#" class="facebook">
-											<div class="front"><img src="static/images/mpesablack.png"  style="height: 40px; width: auto "alt=" "/></div>
-									   	<div class="back"><img src="static/images/mpesablack.png"  style="height: 40px; width: auto" alt=" "/></div></a></li>
+											<div class="front"><img src="{% static "images/mpesablack.png" %}" style="height: 40px; width: auto "alt=" "/></div>
+									   	<div class="back"><img src="{% static "images/mpesablack.png" %}"  style="height: 40px; width: auto" alt=" "/></div></a></li>
 
 
 
 									<li><a href="#" class="facebook">
-										  <div class="front"><img src="static/images/visablack.png"  style="height: 40px; width: auto "alt=" "/></div>
-											<div class="back"><img src="static/images/visablack.png"  style="height: 40px; width: auto" alt=" "/></div></a></li>
+										  <div class="front"><img src="{% static "images/visablack.png" %}"  style="height: 40px; width: auto "alt=" "/></div>
+											<div class="back"><img src="{% static "images/visablack.png" %}" style="height: 40px; width: auto" alt=" "/></div></a></li>
 
 									<li><a href="#" class="facebook">
-											<div class="front"><img src="static/images/mastercardblack.png"  style="height: 40px; width: auto "alt=" "/></div>
-											<div class="back"><img src="static/images/mastercardblack.png"  style="height: 40px; width: auto" alt=" "/></div></a></li>
+											<div class="front"><img src="{% static "images/mastercardblack.png" %}"  style="height: 40px; width: auto "alt=" "/></div>
+											<div class="back"><img src="{% static "images/mastercardblack.png" %}" style="height: 40px; width: auto" alt=" "/></div></a></li>
 
 									<li><a href="#" class="facebook">
-											<div class="front"><img src="static/images/paypalblack.png"  style="height: 40px; width: auto "alt=" "/></div>
-											<div class="back"><img src="static/images/paypalblack.png"  style="height: 40px; width: auto" alt=" "/></div></a></li>
+											<div class="front"><img src="{% static "images/paypalblack.png" %}" style="height: 40px; width: auto "alt=" "/></div>
+											<div class="back"><img src="{% static "images/paypalblack.png" %}"  style="height: 40px; width: auto" alt=" "/></div></a></li>
 						</ul>
 
 			 </div>
@@ -94,7 +95,7 @@
 					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:product_list' %}">Shop</a></li>
 					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:about' %}">about</a></li>
 					<li class="dropdown menu__item">
-						<a href="{% url 'shop:product_list' %}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
+						<a href="{% url 'shop:mens' %}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -102,24 +103,24 @@
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'shop:product_list' %}">Clothing</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Wallets</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Footwear</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Watches</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Accessories</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Bags</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Caps & Hats</a></li>
+											<li><a href="{% url 'shop:mens' %}">Clothing</a></li>
+											<li><a href="{% url 'shop:mens' %}">Wallets</a></li>
+											<li><a href="{% url 'shop:mens' %}">Footwear</a></li>
+											<li><a href="{% url 'shop:mens' %}">Watches</a></li>
+											<li><a href="{% url 'shop:mens' %}">Accessories</a></li>
+											<li><a href="{% url 'shop:mens' %}">Bags</a></li>
+											<li><a href="{% url 'shop:mens' %}">Caps & Hats</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href= "{% url 'shop:product_list' %}">Jewellery</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Sunglasses</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Perfumes</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Beauty</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Shirts</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Sunglasses</a></li>
-											<li><a href="{% url 'shop:product_list' %}">Swimwear</a></li>
+											<li><a href= "{% url 'shop:mens' %}">Jewellery</a></li>
+											<li><a href="{% url 'shop:mens' %}">Sunglasses</a></li>
+											<li><a href="{% url 'shop:mens' %}">Perfumes</a></li>
+											<li><a href="{% url 'shop:mens' %}">Beauty</a></li>
+											<li><a href="{% url 'shop:mens' %}">Shirts</a></li>
+											<li><a href="{% url 'shop:mens' %}">Sunglasses</a></li>
+											<li><a href="{% url 'shop:mens' %}">Swimwear</a></li>
 										</ul>
 									</div>
 									<div class="clearfix"></div>
