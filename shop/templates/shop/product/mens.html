@@ -39,8 +39,10 @@
 					<ul class="dropdown-menu6">
 						<li>
 							<div id="slider-range"></div>
-							<input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-						</li>
+							<p>Price</p>
+<input type="text" name="min_price" maxlength="4" size="3" >
+to <input type="text" name="max_price" maxlength="4" size="3">
+<input type="submit" value="Go">
 					</ul>
 			</div>
 			<div class="css-treeview">
@@ -134,21 +136,11 @@
 			<div class="men-wear-top">
 
 				<div  id="top" class="callbacks_container">
-					<ul class="rslides" id="slider3">
-						<li>
-							<img class="img-responsive" src="{% static "images/banner2.jpg" %}" alt=" "/>
-						</li>
-						<li>
-							<img class="img-responsive" src="{% static "images/banner5.jpg" %}"alt=" "/>
-						</li>
-						<li>
-							<img class="img-responsive" src="{% static "images/banner2.jpg" %}" alt=" "/>
-						</li>
-
-					</ul>
+				
 				</div>
 				<div class="clearfix"></div>
 			</div>
+
 
 
   {% endblock %}
