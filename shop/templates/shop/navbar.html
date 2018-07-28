@@ -169,13 +169,13 @@
 					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:contact' %}">Contact</a></li>
 				  </ul>
           <div class="top_nav_right">
-            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+            <div class="box_1">
 
               {% with totail_items=cart|length %}
                   {% if cart|length > 0 %}
-                      My Shopping Order: <br> <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                      My Shopping Order:
                       <a href="{% url "cart:cart_detail" %}" >
-                          {{ totail_items }} <button class="btn btn-info">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+                          {{ totail_items }} <button class="btn btn-primary">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
                       </a>
                       {% else %}
                       Your cart is empty.  {{ totail_items }}  {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
