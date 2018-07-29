@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'bootstrap4',
     'orders.apps.OrdersConfig',
+    'social_django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,6 +54,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.google.GoogleOAuth2',
+]
 ROOT_URLCONF = 'ecommerce.urls'
 
 TEMPLATES = [
