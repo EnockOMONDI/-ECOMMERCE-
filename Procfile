@@ -1,1 +1,1 @@
-web: gunicorn​ project_name(myproject)​.wsgi​ (
+web: gunicorn ecommerce.wsgi
