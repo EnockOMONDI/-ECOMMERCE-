@@ -1,7 +1,7 @@
 ![Landing page](1landing.png)
 ![shop](3landing.png)
-![Makeorder](2landing.png)
-![mbile view](mobileview.png)
+![Make order](2landing.png)
+![mobile view](mobileview.png)
 # OMS FOR ONLINE SHOP (currio effect)
 #### This is an onlineshop application that allows different users to view items on sale and make an order online. Admins are able to view orders made and process orders
 
