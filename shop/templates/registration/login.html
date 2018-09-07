@@ -1,9 +1,28 @@
+
 {%extends "registration/base.html"%}
 {% load bootstrap4 %}
 {% block content %}
+
+<section class="containerlogin">
 <div class="container">
-  <div class="row">
+  <br>
+  <br>
+  <br>
+  <div class="text-center">
+    <h1 style="font-family: 'Cookie', cursive;"><strong>
+      <img src="../../static/images/logincurio.png " alt="" style="width:750px; height:100px ">
+    </strong></h1>
+  </div>
+  <hr>
+</div>
+<div class=" container ">
+<div class="row ">
     <!-- Empty div -->
+    <div class="col-md-2 "></div>
+    <div class="col-md-4 ">
+      <img src="../../static/images/loginpng.jpg " alt="" style="width:250px; height:400px ">
+</div>
+
     <div class="col-md-4"></div>
     <div class="col-md-4">
       {% if form.errors %}
@@ -11,8 +30,8 @@
       {% endif %}
       <div class="panel panel-default">
 
-        <div class="panel-heading">
-          <h3 class="text-center">Sign In</h3>
+        <div class="panel-heading" style="background-color:#2fdab8">
+          <h3 class="text-center">Join US</h3>
         </div>
         <div class="panel-body">
 
@@ -21,21 +40,22 @@
             {% bootstrap_form form%}
 
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-sm" value="Login">
+              <input type="submit" class="btn btn-info btn-sm" style="background-color:#2fdab8"value="Login">
             </div>
 
             <input type="hidden" name="next" value="{{next}}">
 
           </form>
-
+ 
+        <div class="panel-body">
+          <a href="/accounts/register " class="forgot ">Don't have an account? SignUp here.</a>
         </div>
-
       </div>
-
     </div>
-    <!-- empty div -->
-    <div class="col-md-4"></div>
   </div>
 </div>
+</div>   
+  
+</section>
 
 {% endblock %}

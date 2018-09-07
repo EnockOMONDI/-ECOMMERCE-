@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
 db_from_env = dj_database_url.config(conn_max_age=50)
-DATABASES['default'].update(db_from_env)
+# DATABASES['default'].update(db_from_env)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -123,10 +123,11 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-
+SECRET_KEY = '1234'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
