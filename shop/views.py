@@ -31,7 +31,6 @@ def product_detail(request, id, slug):
     return render(request, 'shop/product/detail.html', context)
 
 
-
 def home(request):
   return render(request, 'shop/product/home.html')
 
