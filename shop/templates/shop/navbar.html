@@ -5,6 +5,9 @@
 <!--  header Login signup nav  ----------------------------------------->
 <div class="header" id="home">
 	<div class="container">
+			<div class="col-md-4 logo_agile">
+					<h1><a href="{% url 'shop:home' %}"><img src="../../static/images/logincurio.png " alt="" style="width:200px; height:40px "></a></h1>
+				</div>
 		<ul class="nav navbar-right">
 				<li class="dropdown">
 			      	{% if request.user.is_authenticated %}
@@ -26,7 +29,7 @@
 
 
 <!--search menu ------------------------------------------------>
-<div class="header-bot">
+<!-- <div class="header-bot">
 	<div class="header-bot_inner_wthreeinfo_header_mid">
 		<div class="col-md-4 header-middle">
 			 <form action=""role="search">
@@ -34,44 +37,17 @@
 					<input type="submit" value=" ">
 				<div class="clearfix"></div>
 			</form>
-		</div>
+		</div> -->
 <!-- //end of search menu ------------------------------------------------>
 
 
 		<!-- header main logo ---------------------------------------------->
-			<div class="col-md-4 logo_agile">
-				<h1><a href="{% url 'shop:home' %}"><span>CURIO</span>EFFECT</a></h1>
-			</div>
+			
     <!-- header main logo ---------------------------------------------->
 
 
         <!-- online payment gateways logos -->
-		<div class="col-md-4 agileits-social top_content">
-						<ul class="social-nav model-3d-0 footer-social ">
-						                                   <li class="share"></li>
-								  <li><a href="#" class="facebook">
-											<div class="front"><img src="{% static "images/mpesablack.png" %}" style="height: 40px; width: auto "alt=" "/></div>
-									   	<div class="front"><img src="{% static "images/mpesablack.png" %}"  style="height: 40px; width: auto" alt=" "/></div></a></li>
-
-
-
-									<li><a href="#" class="facebook">
-										  <div class="front"><img src="{% static "images/visablack.png" %}"  style="height: 40px; width: auto "alt=" "/></div>
-											<div class="front"><img src="{% static "images/visablack.png" %}" style="height: 40px; width: auto" alt=" "/></div></a></li>
-
-									<li><a href="#" class="facebook">
-											<div class="front"><img src="{% static "images/mastercardblack.png" %}"  style="height: 40px; width: auto "alt=" "/></div>
-											<div class="front"><img src="{% static "images/mastercardblack.png" %}" style="height: 40px; width: auto" alt=" "/></div></a></li>
-
-									<li><a href="#" class="facebook">
-											<div class="front"><img src="{% static "images/paypalblack.png" %}" style="height: 40px; width: auto "alt=" "/></div>
-											<div class="front"><img src="{% static "images/paypalblack.png" %}"  style="height: 40px; width: auto" alt=" "/></div></a></li>
-						</ul>
-
-			 </div>
-		<div class="clearfix"></div>
-	</div>
-</div>
+	
 
 
 <!-- start of items navbar ------------------------------------------>

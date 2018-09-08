@@ -11,7 +11,7 @@
 
    <div class="container-fluid">
       <div class="row" style="margin-top: 0%">
-        <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <br>
           <div class="css-treeview">
     				<h4>Categories</h4>
@@ -57,7 +57,22 @@
             </div>
           </div>
   {% endfor %}
-
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+      {% if products%}
+      {% else %}
+        <h1><strong> BUMMER!! </strong>nothing found in searched category .</h1>
+        <h3> <a href="{% url 'shop:contact' %}">Chat</a>  with us so that we find you your prefered Item</h3>
+        <h4>We are dedicated to bring you the best curated <strong>curio merchandise around Africa</strong></h4>
+        <h5><a href="{% url 'shop:product_list' %}">continue shopping</a></h5>
+        <br>
+        <img src="../../static/images/logincurio.png" alt="" style="width:350px; height:80px ">
+      {% endif %}
+  
+    </div>
   <a href="{% url 'shop:product_list' %}" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 
