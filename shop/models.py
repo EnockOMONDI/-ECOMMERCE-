@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+from pyuploadcare.dj.models import ImageField
+
 
 
 class Category(models.Model):
@@ -30,7 +32,7 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
+    image = ImageField(blank=True, null=True, manual_crop="4:4",)
 
     class Meta:
         ordering = ('name', )

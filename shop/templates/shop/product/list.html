@@ -31,8 +31,8 @@
            <div class="col-md-2 product-men">
             <div class="men-pro-item simpleCart_shelfItem">
               <div class="men-thumb-item">
-                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}"  alt="" class="pro-image-front">
-                <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}"  alt="" class="pro-image-back">
+                <img src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"  alt="" class="pro-image-front">
+                <img src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"  alt="" class="pro-image-back">
                   <div class="men-cart-pro">
                     <div class="inner-men-cart-pro">
                       <a href="{{ product.get_absolute_url }}" class="link-product-add-cart">Quick View</a>
@@ -64,12 +64,12 @@
   <div class="row">
       {% if products%}
       {% else %}
-        <h1><strong> BUMMER!! </strong>nothing found in searched category .</h1>
+        <h1><strong> BUMMER!! </strong>nothing found in selected category .</h1>
         <h3> <a href="{% url 'shop:contact' %}">Chat</a>  with us so that we find you your prefered Item</h3>
         <h4>We are dedicated to bring you the best curated <strong>curio merchandise around Africa</strong></h4>
         <h5><a href="{% url 'shop:product_list' %}">continue shopping</a></h5>
         <br>
-        <img src="../../static/images/logincurio.png" alt="" style="width:350px; height:80px ">
+        <img src="../../static/images/logincurio.png" alt="" style="width:150px; height:40px ">
       {% endif %}
   
     </div>
