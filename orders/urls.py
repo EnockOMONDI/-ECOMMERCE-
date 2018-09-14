@@ -7,4 +7,4 @@ app_name = 'orders'
 
 urlpatterns = [
     url(r'^create/$', views.order_create, name='order_create')
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
