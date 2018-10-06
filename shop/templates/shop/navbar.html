@@ -28,28 +28,6 @@
 <!--  //end of header Login signup nav  ----------------------------------------->
 
 
-<!--search menu ------------------------------------------------>
-<!-- <div class="header-bot">
-	<div class="header-bot_inner_wthreeinfo_header_mid">
-		<div class="col-md-4 header-middle">
-			 <form action=""role="search">
-					<input type="search" name="search" placeholder="Search item by category..." required="">
-					<input type="submit" value=" ">
-				<div class="clearfix"></div>
-			</form>
-		</div> -->
-<!-- //end of search menu ------------------------------------------------>
-
-
-		<!-- header main logo ---------------------------------------------->
-			
-    <!-- header main logo ---------------------------------------------->
-
-
-        <!-- online payment gateways logos -->
-	
-
-
 <!-- start of items navbar ------------------------------------------>
 <div class="ban-top">
 	<div class="container">
@@ -152,7 +130,7 @@
                   {% if cart|length > 0 %}
                       My Shopping Order:
                       <a href="{% url "cart:cart_detail" %}" >
-                          {{ totail_items }} <button type="button" class="btn btn-outline-info">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+                          {{ totail_items }} <button type="button" class="btn btn-primary btn-lg">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
                       </a>
                       {% else %}
                       Your cart is empty.  {{ totail_items }}  {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
