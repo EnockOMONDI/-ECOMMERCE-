@@ -6,8 +6,6 @@
 <section class="containerlogin">
 <div class="container">
   <br>
-  <br>
-  <br>
   <div class="text-center">
     <h1 style="font-family: 'Cookie', cursive;"><strong>
       <img src="../../static/images/logincurio.png " alt="" style="width:750px; height:100px ">
@@ -30,26 +28,41 @@
       {% endif %}
       <div class="panel panel-default">
 
-        <div class="panel-heading" style="background-color:#2fdab8">
-          <h3 class="text-center">Join US</h3>
+        <div class="panel-heading" style="background-color:#000">
+          <h5 class="text-center" style="color:#fff">Login using your social Accounts</h5>
         </div>
+        <div class="social-btn text-center">
+            <a href="/accounts/google/login" class="btn btn-danger btn-sm"><i class="fa fa-google"></i> Google</a>
+           <a href="/accounts/twitter/login" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i> Twitter</a>
+           <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-paypal"></i>Paypal</a>
+            <a href="/accounts/facebook/login" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-amazon"></i>Amazon</a>
+            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-instagram"></i>Instagram</a>
         <div class="panel-body">
-
-          <form  action="/accounts/login/" method="post">
+       <form  action="/accounts/login/" method="post">
             {% csrf_token %}
             {% bootstrap_form form%}
 
             <div class="form-group">
-              <input type="submit" class="btn btn-info btn-sm" style="background-color:#2fdab8"value="Login">
+              <input type="submit" class="btn btn-info btn-sm" style="background-color:#2fdab8"  value="Login">
             </div>
-
             <input type="hidden" name="next" value="{{next}}">
-
-          </form>
+           </form>
+           <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+              <li class="share" style="color:#2fdab8">OR LOG IN WITH : </li><br>
+             <a href=""><i class="fa fa-google" aria-hidden="true"></i></a> 
+             <a href=""><i class="fa fa-amazon" aria-hidden="true"></i></a> 
+             <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                                 
+                                 
+          </ul> -->
+          <div class="clearfix"></div>
  
-        <div class="panel-body">
+        <!-- <div class="panel-body">
           <a href="/accounts/register " class="forgot ">Don't have an account? SignUp here.</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -59,3 +72,9 @@
 </section>
 
 {% endblock %}
+
+
+
+
+<!--  ====================================================================================  -->
+

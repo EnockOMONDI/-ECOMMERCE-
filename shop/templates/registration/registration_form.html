@@ -48,3 +48,52 @@
 </div>
 
 {% endblock %}
+ <!-- <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+              <li class="share" style="color:#2fdab8">OR LOG IN WITH : </li><br>
+             <a href=""><i class="fa fa-google" aria-hidden="true"></i></a> 
+             <a href=""><i class="fa fa-amazon" aria-hidden="true"></i></a> 
+             <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                                 
+                                 
+          </ul> -->
+
+          <!-- <div class="signup-form">
+    
+		<h2>Curio Effect</h2>
+		<p class="hint-text">Sign up with your social media account or email address</p>
+		<div class="social-btn text-center">
+			<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+			<a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+			<a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
+    </div>
+   
+    <div class="or-seperator"><b>or</b></div>
+    <form  action="{% url 'django.contrib.auth.views.login' %}" method="post">
+      {% csrf_token %}
+        <div class="form-group">
+        	<input type="text" class="form-control input-lg" name="username" placeholder="Username" required="required">
+        </div>
+		<div class="form-group">
+        	<input type="email" class="form-control input-lg" name="email" placeholder="Email Address" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control input-lg" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>  
+           {% if form.errors %}
+                    <p class=" label label-danger">
+                        Your username and password didn't match. 
+                        Please try again.
+                    </p>
+                {% endif %}
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block signup-btn" value="Sign Up">Sign Up</button>
+        </div>
+        <input type="hidden" name="next" value="{{next}}">
+    </form>
+    <div class="text-center">Already have an account? <a href="/accounts/login ">Login here</a></div>
+</div> -->

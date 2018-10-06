@@ -28,6 +28,7 @@ from django.contrib.auth import views
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^logout/$', views.logout, {"next_page": '/'}),
     url('cart', include('cart.urls')),
     url('orders/', include('orders.urls')),
