@@ -11,9 +11,9 @@
 
    <div class="container-fluid">
       <div class="row" style="margin-top: 0%">
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar" >
           <br>
-          <div class="css-treeview">
+          <div class="css-treeview" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
     				<h4>Categories</h4>
             	<ul class="tree-list-pad">
               <li {% if not category %} class="active"{% endif %}><a href="{% url 'shop:product_list' %}">All</a></li>
@@ -77,5 +77,5 @@
 
     </div>
   </div>
-    </div><!-- /.container -->
+</div>
 {% endblock %}

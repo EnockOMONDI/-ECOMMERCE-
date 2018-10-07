@@ -1790,6 +1790,7 @@ ul.multi-column-dropdown li a:hover{
 /*-- coupons --*/
 .coupons,.banner-bootom-w3-agileits,.new_arrivals_agile_w3ls_info{
    padding:4em 0;
+  
 }
 .w3layouts_mail_grid {
     padding: 0 1em;
@@ -1798,7 +1799,8 @@ ul.multi-column-dropdown li a:hover{
 	float: left;
     width: 70px;
     height: 70px;
-    text-align: center;
+	text-align: center;
+	
 }
 .w3layouts_mail_grid_left1 i{
 	font-size: 1.3em;
