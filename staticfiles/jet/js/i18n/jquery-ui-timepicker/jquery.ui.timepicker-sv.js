@@ -1,12 +1,1 @@
-/* Swedish initialisation for the timepicker plugin */
-/* Written by Björn Westlin (bjorn.westlin@su.se). */
-jQuery(function($){
-    $.timepicker.regional['sv'] = {
-                hourText: 'Timme',
-                minuteText: 'Minut',
-                amPmText: ['AM', 'PM'] ,
-                closeButtonText: 'Stäng',
-                nowButtonText: 'Nu',
-                deselectButtonText: 'Rensa' }
-    $.timepicker.setDefaults($.timepicker.regional['sv']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-sv.js

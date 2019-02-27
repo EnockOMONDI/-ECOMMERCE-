@@ -1,12 +1,1 @@
-/* Spanish initialisation for the jQuery time picker plugin. */
-/* Writen by Jandro González (agonzalezalves@gmail.com) */
-jQuery(function($){
-    $.timepicker.regional['es'] = {
-                hourText: 'Hora',
-                minuteText: 'Minuto',
-                amPmText: ['AM', 'PM'],
-                closeButtonText: 'Aceptar',
-                nowButtonText: 'Ahora',
-                deselectButtonText: 'Deseleccionar' }
-    $.timepicker.setDefaults($.timepicker.regional['es']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-es.js

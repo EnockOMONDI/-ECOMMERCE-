@@ -1,13 +1,1 @@
-/* French initialisation for the jQuery time picker plugin. */
-/* Written by Bernd Plagge (bplagge@choicenet.ne.jp),
-              Francois Gelinas (frank@fgelinas.com) */
-jQuery(function($){
-    $.timepicker.regional['fr'] = {
-                hourText: 'Heures',
-                minuteText: 'Minutes',
-                amPmText: ['AM', 'PM'],
-                closeButtonText: 'Fermer',
-                nowButtonText: 'Maintenant',
-                deselectButtonText: 'Désélectionner' }
-    $.timepicker.setDefaults($.timepicker.regional['fr']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-fr.js

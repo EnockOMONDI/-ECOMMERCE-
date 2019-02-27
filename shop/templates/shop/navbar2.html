@@ -1,0 +1,159 @@
+{% load static %}
+{% load bootstrap4 %}
+<nav>
+
+<!--  header Login signup nav  ------------>
+<div class="header" id="home">
+	<div class="container">
+			
+		<ul class="nav navbar-right">
+				<li class="dropdown">
+			      	{% if request.user.is_authenticated %}
+					         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff">Welcome  {{ request.user.username }}<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+							     <li><a href="/logout" style="color:black">logout</a></li>
+							</ul>
+				</li>
+		</ul>
+					        	{% else %}
+	   <ul>
+		    <li> <a href="/accounts/login"><i aria-hidden="true"></i> Sign In </a></li>
+		   	<li> <a href="/admin"><i class="fa fa-unlock-alt"aria-hidden="true"></i>Admin Login</a></li>
+					          {% endif %}
+		</ul>
+	</div>
+</div>
+<!--  //end of header Login signup nav  ----------------------------------------->
+
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="preloader--inner"></div>
+    </div>
+    <!-- Preloader End -->
+
+
+            <!-- Header Navbar Start -->
+            <div class="header--navbar navbar bg-black" data-trigger="sticky">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle style--1 collapsed" data-toggle="collapse" data-target="#headerNav">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Header Navbar Logo Start -->
+                       
+                        <!-- Header Navbar Logo End -->
+                    </div>
+
+                    <div id="headerNav" class="navbar-collapse collapse float--right">
+                        <!-- Header Nav Links Start -->
+                        <ul class="header--nav-links style--1 nav ff--primary">
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Home</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a href="{% url 'shop:home' %}"><span>Welcome</span></a></li>
+                                  
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Community</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'activity' %}"><span>Activity</span></a></li>
+                                    <li><a href="{% url 'members' %}"><span>Members</span></a></li>
+                                    <li><a href="{% url 'groups' %}"><span>Groups</span></a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown megamenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Explore</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <div class="row">
+                                        <ul class="col-md-2">
+                                            <li><a href="{% url 'members' %}">Members</a></li>
+                                            <li><a href="{% url 'groups' %}">Groups</a></li>
+                                            <li><a href="{% url 'activity' %}">Site Wide Activity</a></li>
+                                            
+                                        </ul>
+
+                                   
+                                        
+                                        <ul class="col-md-2">
+                                           
+                                            <li><a href="{% url 'shop:404' %}">Topics</a></li>
+                                            
+                                        </ul>
+                                        
+                                        <ul class="col-md-2">
+                                            <li><a href="{% url 'shop:product_list' %}">Shop</a></li> <!-- Products.html-->
+                                            <!-- <li><a href="product-details.html">Product Details</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="#">Dummy</a></li> -->
+                                        </ul>
+                                        
+                                        <ul class="col-md-2">
+                                            <li><a href="{% url 'shop:notfound' %}">Blog</a></li >  <!--blog-sidebar-right.html-->
+                                            <!-- <li><a href="blog-sidebar-left.html">Blog Sidebar Left</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="#">Dummy</a></li>
+                                            <li><a href="#">Dummy</a></li> -->
+                                        </ul>
+                                        
+                                        <ul class="col-md-2">
+                                            <li><a href="{% url 'shop:404' %}">About</a></li> <!--about.html-->
+                                            <li><a href="{% url 'shop:404' %}">FAQ</a></li>     <!--faq.html-->
+                                            <li><a href="{% url 'shop:404' %}">Contact</a></li>  <!--contact.html-->
+                                            <!-- <li><a href="coming-soon.html">Coming Soon</a></li>
+                                            <li><a href="404.html">404</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Products</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'shop:product_list' %}">Shop</a></li> <!--products.htm-->
+                                    <!-- <li><a href="product-details.html">Product Details</a></li> 
+                                    <li><a href="cart.html">Cart</a></li> 
+                                    <li><a href="checkout.html">Checkout</a></li>  -->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Blog</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'notfound' %}">Blog </a></li> <!--blog-sidebar-right.html-->
+                                  
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'shop:404' %}"><span>Contact</span></a></li> <!--contact.html-->
+                        </ul>
+                      
+                        <!-- Header Nav Links End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Header Navbar End -->
+        </header>

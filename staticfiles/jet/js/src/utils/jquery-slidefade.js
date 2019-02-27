@@ -1,5 +1,1 @@
-var $ = require('jquery');
-
-$.fn.slideFadeToggle = function(speed, easing, callback) {
-    return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
-};
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/src/utils/jquery-slidefade.js

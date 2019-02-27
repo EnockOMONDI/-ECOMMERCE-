@@ -1,0 +1,1 @@
+/usr/local/lib/python3.6/dist-packages/jet/dashboard/static/jet.dashboard/dashboard_modules/google_analytics.js

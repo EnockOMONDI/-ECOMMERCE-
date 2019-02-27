@@ -3,6 +3,8 @@ from .models import Category, Product
 from cart.forms import CartAddProductForm
 from django.contrib.auth.decorators import login_required
 from .forms import NewsLetterForm
+from django.http import HttpResponse, Http404,HttpResponseRedirect
+from .email import send_welcome_email
 
 @login_required(login_url='/accounts/login/')
 def product_list(request, category_slug=None):
@@ -31,25 +33,40 @@ def product_detail(request, id, slug):
     return render(request, 'shop/product/detail.html', context)
 
 
+
 def home(request):
   return render(request, 'shop/product/home.html')
-
-def homeaccesories(request):
-  return render(request, 'shop/product/homeaccesories.html')
-
-def decorbeauty(request):
-  return render(request, 'shop/product/decorbeauty.html')
 
 def about(request):
   return render(request, 'shop/product/about.html')
 
-def mens(request):
-  return render(request, 'shop/product/mens.html')
+def activity(request):
+  return render(request, 'shop/product/activity.html')
+
+def members(request):
+  return render(request, 'shop/product/members.html')
+
+def groups(request):
+  return render(request, 'shop/product/groups.html')
+
+def notfound(request):
+  return render(request, 'shop/product/notfound.html')
 
 def contact(request):
   return render(request, 'shop/product/contact.html')
 
-def womens(request):
-   return render(request, 'shop/product/womens.html')
 
+def newsletter(request):
   
+      if request.method == 'POST':
+         form = NewsLetterForm(request.POST)
+         if form.is_valid():
+            email = form.cleaned_data['email']
+            recipient = NewsLetterRecipients(email =email)
+            recipient.save()
+            HttpResponseRedirect('newsletter')
+             
+      else:
+        form = NewsLetterForm()
+      return render(request, 'shop/product/contact.html')
+    

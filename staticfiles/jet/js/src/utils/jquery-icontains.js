@@ -1,7 +1,1 @@
-var $ = require('jquery');
-
-$.expr[":"].icontains = $.expr.createPseudo(function (arg) {
-    return function (elem) {
-        return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-    };
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/src/utils/jquery-icontains.js

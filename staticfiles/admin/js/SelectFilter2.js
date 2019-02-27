@@ -1,3 +1,1 @@
-window.SelectFilter = {
-    init: function (field_id, field_name, is_stacked) { }
-};
+/usr/local/lib/python3.6/dist-packages/jet/static/admin/js/SelectFilter2.js

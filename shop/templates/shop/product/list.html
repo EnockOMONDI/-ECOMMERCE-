@@ -3,15 +3,30 @@
 {% load static %}
 
 {% block title %}
-    {% if category %}{{ category.name }} {% else %} Products {% endif %}
+    {% if category %}{{ category.name }} {% else %} GUMZO | SOKO {% endif %}
 {% endblock %}
 
 {% block content %}
 
+<div class="top_nav_right">
+  <div class="box_1">
 
+    {% with totail_items=cart|length %}
+      {% if cart|length > 0 %}
+        My Shopping Order:
+        <a href="{% url 'cart:cart_detail' %}" >
+          {{ totail_items }} <button type="button" class="btn btn-primary btn-lg">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+        </a>
+        {% else %}
+        Your cart is empty.  {{ totail_items }}  {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+      {% endif %}
+    {% endwith %}
+
+      </div>
+  </div>
    <div class="container-fluid">
       <div class="row" style="margin-top: 0%">
-        <div class="col-sm-5 " >
+        <div class="col-sm-3 " >
           <br>
           <div class="css-treeview" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
     				<h4>Categories</h4>
@@ -63,12 +78,12 @@
   <div class="row">
       {% if products%}
       {% else %}
-        <h1><strong> BUMMER!! </strong>nothing found in selected category .</h1>
-        <h3> <a href="{% url 'shop:contact' %}">Chat</a>  with us so that we find you your prefered Item</h3>
-        <h4>We are dedicated to bring you the best curated <strong>curio merchandise around Africa</strong></h4>
+        <h1><strong>sorry </strong>nothing found in selected category .</h1>
+        <h3> <a href="{% url 'shop:contact' %}">contact</a> us if you wish to sell products on gumzo soko</h3>
+        <h4>or kindly visit this page soon to find items</h4>
         <h5><a href="{% url 'shop:product_list' %}">continue shopping</a></h5>
         <br>
-        <img src="../../static/images/logincurio.png" alt="" style="width:150px; height:40px ">
+        
       {% endif %}
   
     </div>

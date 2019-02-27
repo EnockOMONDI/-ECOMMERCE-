@@ -5,24 +5,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Curio On-line{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}GUMZO | WELCOME{% endblock %}</title>
+   
+   
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700%7CRoboto:300,400,400i,500,700">
 
     <link rel="shortcut icon" type="image/png" href="{% static 'images/topicon.png' %}"/>
 <!--//tags -->
-    <link rel="stylesheet" href=" {% static 'css/bootstrap.css'%} "type="text/css" media="all">
-    <link rel="stylesheet" href=" {% static 'css/style.css' %} "type="text/css" media="all">
-    <link rel="stylesheet" href=" {% static 'css/font-awesome.css' %} "type="text/css" media="all">
-    <link rel="stylesheet" href=" {% static 'css/easy-responsive-tabs.css' %}"type="text/css" media="all">
+     
+<link rel="stylesheet" href=" {% static 'css/gumzostyle.css'%} "type="text/css" media="all">
+
+  <link rel="stylesheet" href=" {% static 'css/colors/color-1.css'%} "type="text/css" media="all">
+   <link rel="stylesheet" href=" {% static 'css/gumzoresponsive-style.css '%} "type="text/css" media="all">
+   <link rel="stylesheet" href=" {% static 'css/gumzocustom.css '%} "type="text/css" media="all">
+   <link rel="stylesheet" href=" {% static 'css/gumzoplugins.min.css '%} "type="text/css" media="all">
+   <link rel="stylesheet" href=" {% static 'css/gumzostyle.css' %} "type="text/css" media="all">
+   <link rel="stylesheet" href=" {% static 'css/style.css' %} "type="text/css" media="all">
+    
    <!-- //for bootstrap working -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700%7CRoboto:300,400,400i,500,700">
     <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
     <script>
-        UPLOADCARE_PUBLIC_KEY = "4b92b91744f8fad64594";
+        UPLOADCARE_PUBLIC_KEY = '1cbad0e210e9fd113e96';
+        UPLOADCARE_TABS = 'file camera url facebook gdrive gphotos dropbox instagram evernote onedrive';
+        UPLOADCARE_EFFECTS = 'crop,rotate,flip';
+        UPLOADCARE_IMAGE_SHRINK = '1024x1024 60%';
+        UPLOADCARE_IMAGES_ONLY = true;
+        UPLOADCARE_PREVIEW_STEP = true;
+        UPLOADCARE_CLEARABLE = true;
       </script>
-      <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.6.0/uploadcare.full.min.js"></script>
+      
+      <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script><script src="https://ucarecdn.com/libs/widget-tab-effects/1.x/uploadcare.tab-effects.js"></script>
+      <script>
+        uploadcare.registerTab('preview', uploadcareTabEffects)
+      </script>
 </head>
 <body>
 {% include 'shop/navbar.html' %}
@@ -31,9 +49,16 @@
 
 {% endblock %}
 
+  <!-- ==== Plugins Bundle ==== -->
+ 
+  <script src="{% static 'js/gumzoplugins.min.js' %}" type="text/javascript"></script>
+  <!-- ==== Color Switcher Plugin ==== -->
+ 
+  <!-- <script src="{% static 'js/gumzocolor-switcher.min.js' %}" type="text/javascript"></script> -->
 
-<script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
-<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+  <!-- ==== Main Script ==== -->
+  <script src="{% static 'js/gumzomain.js' %}"></script>
+
 </body>
 </html>
 

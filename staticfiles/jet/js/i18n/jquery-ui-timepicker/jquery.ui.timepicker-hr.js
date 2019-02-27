@@ -1,13 +1,1 @@
-/* Croatian/Bosnian initialisation for the timepicker plugin */
-/* Written by Rene Brakus (rene.brakus@infobip.com). */
-jQuery(function($){
-    $.timepicker.regional['hr'] = {
-                hourText: 'Sat',
-                minuteText: 'Minuta',
-                amPmText: ['Prijepodne', 'Poslijepodne'],
-                closeButtonText: 'Zatvoriti',
-                nowButtonText: 'Sada',
-                deselectButtonText: 'Poništite'}
-
-    $.timepicker.setDefaults($.timepicker.regional['hr']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-hr.js

@@ -1,12 +1,1 @@
-/* Japanese initialisation for the jQuery time picker plugin. */
-/* Written by Bernd Plagge (bplagge@choicenet.ne.jp). */
-jQuery(function($){
-    $.timepicker.regional['ja'] = {
-                hourText: '時間',
-                minuteText: '分',
-                amPmText: ['午前', '午後'],
-                closeButtonText: '閉じる',
-                nowButtonText: '現時',
-                deselectButtonText: '選択解除' }
-    $.timepicker.setDefaults($.timepicker.regional['ja']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-ja.js

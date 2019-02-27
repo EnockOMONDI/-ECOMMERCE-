@@ -1,12 +1,1 @@
-/* German initialisation for the timepicker plugin */
-/* Written by Lowie Hulzinga. */
-jQuery(function($){
-    $.timepicker.regional['de'] = {
-                hourText: 'Stunde',
-                minuteText: 'Minuten',
-                amPmText: ['AM', 'PM'] ,
-                closeButtonText: 'Beenden',
-                nowButtonText: 'Aktuelle Zeit',
-                deselectButtonText: 'Wischen' }
-    $.timepicker.setDefaults($.timepicker.regional['de']);
-});
+/usr/local/lib/python3.6/dist-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-de.js
