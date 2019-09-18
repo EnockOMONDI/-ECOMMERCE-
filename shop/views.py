@@ -4,7 +4,7 @@ from cart.forms import CartAddProductForm
 from django.contrib.auth.decorators import login_required
 from .forms import NewsLetterForm
 
-@login_required(login_url='/accounts/login/')
+# @login_required(login_url='/accounts/login/')
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -20,7 +20,7 @@ def product_list(request, category_slug=None):
     }
     return render(request, 'shop/product/list.html', context)
 
-@login_required(login_url='/accounts/login/')
+# @login_required(login_url='/accounts/login/')
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()
