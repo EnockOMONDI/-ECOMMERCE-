@@ -5,10 +5,14 @@ from django.conf.urls.static import static
 
 
 
+
 app_name = 'shop'
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^vendorrequest/', views.vendorrequest, name='vendorrequest'),
+    url(r'^Vendorfaqs/', views.Vendorfaqs, name='Vendorfaqs'),
+    url(r'^log/', views.log, name='log'),
     url(r'^about/', views.about, name='about'),
     url(r'^contact/', views.contact, name='contact'),
     url(r'^mens/', views.mens, name='mens'),

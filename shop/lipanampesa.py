@@ -3,6 +3,7 @@ from datetime import datetime
 import requests
 from requests.auth import HTTPBasicAuth
 import keys
+from cart.cart import Cart
 
 
 unformatted_time = datetime.now()
@@ -31,6 +32,7 @@ my_access_token = json_response['access_token']
 def lipa_na_mpesa():
     
     access_token = my_access_token 
+   
     api_url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
 
     headers = { "Authorization": "Bearer %s" % access_token }
@@ -40,7 +42,7 @@ def lipa_na_mpesa():
         "Password": decoded_password,
         "Timestamp": formatted_time ,
         "TransactionType": "CustomerPayBillOnline",
-        "Amount": "90",
+        "Amount":  cart.get_total_price ,
         "PartyA": keys.phone_number,
         "PartyB": keys.business_shortCode,
         "PhoneNumber": keys.phone_number,
