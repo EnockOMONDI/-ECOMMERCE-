@@ -12,14 +12,14 @@
 
     <link rel="shortcut icon" type="image/png" href="{% static 'images/u.png' %}"/>
 
+
     {% for local_css_url in local_css_urls %}
     <link rel="stylesheet" href="{% static local_css_url %}">
 {% endfor %}
 
 {% for local_js_url in local_js_urls %}
-    <script src="{% static local_js_url %}"></script>
+<script src="{% static local_js_url %}"></script>
 {% endfor %}
-
 
    <!-- //for bootstrap working -->
    <link href="https://fonts.googleapis.com/css?family=Caveat|Gloria+Hallelujah|Handlee|Modak|Nanum+Pen+Script|Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -35,10 +35,16 @@
 {% block content %}
 
 
+
 {% endblock %}
 <!--   Core JS Files   -->
 
 
+{% include 'shop/homepage/page/js.html' %}
+
+{% for local_js_url in local_js_urls %}
+<script src="{% static local_js_url %}"></script>
+{% endfor %}
 
 
 </body>

@@ -11,13 +11,13 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
     <link rel="shortcut icon" type="image/png" href="{% static 'images/u.png' %}"/>
-
+   
     {% for local_css_url in local_css_urls %}
     <link rel="stylesheet" href="{% static local_css_url %}">
 {% endfor %}
 
 {% for local_js_url in local_js_urls %}
-    <script src="{% static local_js_url %}"></script>
+<script src="{% static local_js_url %}"></script>
 {% endfor %}
 
 
@@ -37,9 +37,11 @@
 
 {% endblock %}
 <!--   Core JS Files   -->
+{% include 'shop/homepage/page/js.html' %}
 
-
-
+{% for local_js_url in local_js_urls %}
+<script src="{% static local_js_url %}"></script>
+{% endfor %}
 
 </body>
 </html>
