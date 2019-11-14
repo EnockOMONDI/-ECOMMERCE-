@@ -17044,7 +17044,7 @@ thead.thead-inverse th {
 .card .card-header-primary,
 .card.card-rotate.bg-primary .back,
 .card.card-rotate.bg-primary .front {
-   background: linear-gradient(60deg, #ab47bc, #7b1fa2)
+   background: linear-gradient(60deg, #79e2cd, #2fdab8)
 }
 
 .card.bg-info,
@@ -17143,8 +17143,8 @@ thead.thead-inverse th {
 }
 
 .card .author .avatar {
-   width: 30px;
-   height: 30px;
+   width: 50px;
+   height: 50px;
    overflow: hidden;
    border-radius: 50%;
    margin-right: 5px
