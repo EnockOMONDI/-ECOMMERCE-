@@ -35,5 +35,4 @@ urlpatterns = [
     url('cart', include('cart.urls')),
     url('orders/', include('orders.urls')),
     url('', include('shop.urls')),
-
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

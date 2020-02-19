@@ -22,7 +22,6 @@ def cart_remove(request, product_id):
     cart.remove(product)
     return redirect('cart:cart_detail')
 
-
 def cart_detail(request):
     cart = Cart(request)
     for item in cart:
@@ -33,15 +32,17 @@ def cart_detail(request):
                             "css3/material-kit.min1036.css",
                             "css3/demo.css",
                             "css3/vertical-nav.css"],
-        'local_js_urls': [ "core/jquery.min.js",
-                           "core/popper.min.js",
-                           "core/bootstrap-material-design.min.js",
-                           "js3/vertical-nav.js",
-                           "js3/material-kit.min1036.js",
+        'local_js_urls': ["js3/vertical-nav.js",
+                          "js3/material-kit.min1036.js",
                            "js3/demo.js",
                            "js3/buttons.js",
-                           "js3/modernizr.js",                         
-                           "js3/bootstrap.min.js",                           
+                           "js3/modernizr.js",
+                          
+                           "js3/jquery.min.js",
+                           "js3/bootstrap.min.js", 
+                           "core/jquery.min.js",
+                           "core/popper.min.js",
+                           "core/bootstrap-material-design.min.js",
                            "js3/plugins/moment.min.js ",
                            "js3/plugins/bootstrap-datetimepicker.js",
                            "js3/plugins/jquery.flexisel.js",

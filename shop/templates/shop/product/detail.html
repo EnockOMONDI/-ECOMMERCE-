@@ -1,42 +1,42 @@
-{% extends 'shop/base3.html' %}
+{% extends 'shop/homepage/base.html' %}
 {% load static %}
 {% block title %}
     {% if category %}{{ category.name }} {% else %} Products {% endif %}
 {% endblock %}
 
 {% block content %}
-   <div class="container">
-      <div class="row" style="margin-top: 6%">
+<div class="container">
+    <div class="row" style="margin-top: 6%">
 
-        <div class="col-sm-8 blog-main" >
+      <div class="col-sm-8 blog-main" >
 
-          <div class="blog-post" >
-              <div class="row">
-                <div class="card" >
-                    <div class="card-body" >
-                        <div class="col-md-6 text-right">
-                            <img src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" alt="..." style="height: 220px; width: auto; box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);">
-                        </div>
-                        <div class="col-md-6" style="padding-left: 20px ">
-                            <h3>{{ product.name }}</h3>
-                            <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
-                            <p class="text-muted">Kshs. {{ product.price }}</p>
-                            <form action="{% url "cart:cart_add" product.id %}" method="post">
-                                {% csrf_token %}
-                                {{ cart_product_form }}
-                                <input type="submit" value="add to cart" class="btn btn-warning">
-                            </form>
-                            <p>{{ product.description|safe|linebreaksbr }}</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="blog-post" >
+            <div class="row">
+              <div class="card" >
+                  <div class="card-body" >
+                      <div class="col-md-6 text-right">
+                          <img src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" alt="..." style="height: 220px; width: auto; box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);">
+                      </div>
+                      <div class="col-md-6" style="padding-left: 20px ">
+                          <h3>{{ product.name }}</h3>
+                          <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
+                          <p class="text-muted">Kshs. {{ product.price }}</p>
+                          <form action="{% url "cart:cart_add" product.id %}" method="post">
+                              {% csrf_token %}
+                              {{ cart_product_form }}
+                              <input type="submit" value="add to cart" class="btn btn-warning">
+                          </form>
+                          <p>{{ product.description|safe|linebreaksbr }}</p>
+                      </div>
+                  </div>
               </div>
+            </div>
 
 
-          </div><!-- /.blog-post -->
+        </div><!-- /.blog-post -->
 
-        </div><!-- /.blog-main -->
-      </div><!-- /.row -->
+      </div><!-- /.blog-main -->
+    </div><!-- /.row -->
 
-    </div><!-- /.container -->
+  </div><!-- /.container -->
 {% endblock %}

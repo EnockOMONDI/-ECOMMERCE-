@@ -77,7 +77,7 @@ def subcategory_list(request, category_slug=None):
         'subcategories': subcategories,
         'subcategory': SubCategory,
     }
-    return render(request, 'shop/homepage/page/home.html', context)
+    return render(request, 'shop/product/sublist.html', context)
 
 def minicategory_list(request, subcategory_slug=None):
     subcategory = None
@@ -93,7 +93,7 @@ def minicategory_list(request, subcategory_slug=None):
         'minicategories': minicategories,
         'minicategory': MiniCategory,
     }
-    return render(request, 'shop/homepage/page/home.html', context)
+    return render(request, 'shop/product/minilist.html', context)
 
 # @login_required(login_url='/accounts/login/')
 def product_detail(request, id, slug):

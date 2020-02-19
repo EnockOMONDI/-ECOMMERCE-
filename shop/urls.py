@@ -20,10 +20,11 @@ urlpatterns = [
     url(r'^decorbeauty/', views.decorbeauty, name='decorbeauty'),
     url(r'^homeaccesories/', views.homeaccesories, name='homeaccesories'),
     url(r'^shop/', views.product_list, name='product_list'),
-    url(r'^(?P<category_slug>[-\w]+)/$', views.subcategory_list, name='subcategory_list'),
-    url(r'^(?P<subcategory_slug>[-\w]+)/$', views.minicategory_list, name='minicategory_list'),
     url(r'^(?P<category_slug>[-\w]+)/$', views.product_list, name='product_list_by_category'),
     url(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.product_detail, name='product_detail'),
+    url(r'^(?P<category_slug>[-\w]+)/$', views.subcategory_list, name='subcategory_list'),
+    url(r'^(?P<subcategory_slug>[-\w]+)/$', views.minicategory_list, name='minicategory_list'),
+    
    
     
 
