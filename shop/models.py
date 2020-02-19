@@ -9,6 +9,9 @@ class Category(models.Model):
     slug = models.SlugField(max_length=150, unique=True ,db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    image = ImageField(blank=True, null=True, manual_crop="4:4",)
+    title = models.CharField(max_length=150, db_index=True)
+    
 
     class Meta:
         ordering = ('name', )
@@ -19,11 +22,56 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('shop:product_list_by_category', args=[self.slug])
+        return reverse('shop:subcategory_list', args=[self.slug])
+
+
+
+class SubCategory(models.Model):
+    category = models.ForeignKey(Category, related_name='subcategories', on_delete=models.CASCADE)
+    name = models.CharField(max_length=150, db_index=True)
+    slug = models.SlugField(max_length=150, unique=True ,db_index=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    available = models.BooleanField(default=True)
+
+
+    class Meta:
+        ordering = ('name', )
+        verbose_name = 'subcategory'
+        verbose_name_plural = 'subcategories'
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('shop:minicategory_list', args=[self.slug])
+
+
+class MiniCategory(models.Model):
+    category = models.ForeignKey(Category, related_name='categories', on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, related_name='subcategories', on_delete=models.CASCADE)
+    name = models.CharField(max_length=150, db_index=True)
+    slug = models.SlugField(max_length=150, unique=True ,db_index=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    available = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('name', )
+        verbose_name = 'minicategory'
+        verbose_name_plural = 'minicategories'
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('shop:product_list', args=[self.slug])
 
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, related_name='products', on_delete=models.CASCADE)
+    minicategory = models.ForeignKey(MiniCategory, related_name='products', on_delete=models.CASCADE)
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(blank=True)

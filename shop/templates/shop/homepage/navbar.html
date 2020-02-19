@@ -1,11 +1,10 @@
 {% load static %}
 
 
+<!----------nav -------------------------------------------->
   <nav  class="navbar  bg-dark fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav"  style=" box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); ">
     <div class="container" >
-
-
-      <div class="navbar-translate">
+   <div class="navbar-translate">
 		<a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:180px; height:100px "></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -15,51 +14,25 @@
         </button>
       </div>
 
+
+
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">    
-          <li class="dropdown nav-item">
-              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"  id="multiDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <!-- <i class="material-icons">apps</i> Components --> Shop
-              </a>
-             
-                  <div class="dropdown-menu" aria-labelledby="multiDropdownMenu">
-                    <a class="dropdown-item" href="#pablo">Action</a>
-                    <a class="dropdown-item" href="#pablo">Another action</a>
-                    <a class="dropdown-item dropdown-toggle" href="#pablo">Submenu</a>
-                    
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#pablo">Submenu action</a>
-                      <a class="dropdown-item" href="#pablo">Submenu action</a>
-                      <a class="dropdown-item dropdown-toggle" href="#pablo">Subsubmenu</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#pablo">Subsubmenu action 1</a>
-                        <a class="dropdown-item" href="#pablo">Subsubmenu action 2</a>
-                      </div>
-                      <a class="dropdown-item dropdown-toggle" href="#pablo">Second subsubmenu</a>
-                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#pablo">Subsubmenu action 1</a>
-                        <a class="dropdown-item" href="#pablo">Subsubmenu action 2</a>
-                      </div>
-                    </div>
-                  </div>
-    
-    
-
-          </li>
+        
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <!-- <i class="material-icons">apps</i> Components --> Shop
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
-                <i class="material-icons">layers</i> Presentation
+                <i class="material-icons">layers</i> Shop
               </a>
-              <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
+              <!-- <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
                 <i class="material-icons">line_style</i> All Components
               </a>
               <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
                 <i class="material-icons">content_paste</i> Documentation
-              </a>
+              </a> -->
             </div>
           </li>
           <li class="dropdown nav-item">
@@ -70,7 +43,7 @@
               <a href="{% url 'shop:about' %}"  class="dropdown-item">
                 <i class="material-icons">dns</i> Our story
               </a>
-              <a href="{% url 'shop:about' %}"  class="dropdown-item">
+              <a href="{% url 'shop:contact' %}"  class="dropdown-item">
                 <i class="material-icons">call</i> Contact Us
               </a>
               <a href="{% url 'shop:about' %}" class="dropdown-item">
@@ -96,12 +69,11 @@
                   <a class="dropdown-item"  data-toggle="modal" data-target="#loginModal"> <i class="material-icons">account_circle</i> Login</a>
                   <a class="dropdown-item"  data-toggle="modal" data-target="#signupModal"> <i class="material-icons">person_add</i> Sign up</a>
                   <a class="dropdown-item"  data-toggle="modal" data-target="#ordertrackmodal"> <i class="material-icons">motorcycle</i> Track Order</a>
-
-                
                
                 </div>
           
               </div>
+  
         </li>
           <li class="dropdown nav-item">
               <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -127,9 +99,7 @@
     </div>
   </nav>
 
-
-
-
+  <!--------- end of nav -------------------------------->
 
 
 
@@ -205,7 +175,10 @@
                     </div>
                   </div>
                 </div>
-                <!--  End Modal -->
+                <!--  End of Login Modal -->
+
+
+
 
 
 

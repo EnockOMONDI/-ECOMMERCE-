@@ -1,230 +1,255 @@
-{% extends 'shop/base.html' %}
+{% extends 'shop/base2.html' %}
 {% load static %}
 
 
 
 {% block content %}
+<body class="about-us sidebar-collapse">
 
-<!-- /banner_bottom_agile_info -->
-<div class="page-head_agile_info_w3l">
-		<div class="container">
-			<h3><span>ABOUT</span> US</h3>
-			<!--/w3_short-->
-				 <div class="services-breadcrumb">
-						<div class="agile_inner_breadcrumb">
 
-						   <ul class="w3_short">
-								<li><a href="{% url 'shop:home' %}">Home</a><i>|</i></li>
-								<li>About</li>
-							</ul>
-						 </div>
-				</div>
-	   <!--//w3_short-->
-	</div>
-</div>
-<!-- /banner_bottom_agile_info -->
-    <div class="banner_bottom_agile_info">
-	    <div class="container">
-			<div class="agile_ab_w3ls_info">
-				<div class="col-md-6 ab_pic_w3ls">
-				   	<img src="{% static "images/16.jpg" %}" alt=" " class="img-responsive" />
-				</div>
-				 <div class="col-md-6 ab_pic_w3ls_text_info">
-				    <h5><span>About</span> USTAWI  </h5>
-					<p>USTAWI is an African Online store, that provides an opportunity for our local artisans, fashion project owners and designers to showcase and sell their unique african designs ranging from furniture (home decor, office decor), jewellery and so on.
-	                   Offering customers Africa's diverse Fashion taste under one roof 
-					   
-					 
-					</p>
-					<!-- <p> <strong>AFRICA MEETS ART & TECH</strong>(sipmle is better than complex) <br> 
-					We have come along as a great ray of hope for African businesses struggling to find a reckoning.
-					</p> -->
-					<h5> HOW IT WORKS  </h5>
-					<p>We welcome multiple merchants to add their unique line of products to our repository, which then get displayed on our site, providing a single store where there is a union of African Fashion Products. 
-					<br>
-					</p>
-				</div>
-				  <div class="clearfix"></div>
-			</div>
-            <div class="banner_bottom_agile_info_inner_w3ls">
-    	           <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-						<figure class="effect-roxy">
-							<img src="{% static "images/bottom1.jpg" %}" alt=" " class="img-responsive" />
-							<figcaption>
-								<h3><span>F</span>all Ahead</h3>
-								<p>New Arrivals</p>
-							</figcaption>
-						</figure>
-					</div>
-					 <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-						<figure class="effect-roxy">
-							<img src="{% static "images/bottom2.jpg" %}" alt=" " class="img-responsive" />
-							<figcaption>
-								<h3><span>F</span>all Ahead</h3>
-								<p>New Arrivals</p>
-							</figcaption>
-						</figure>
-					</div>
-					<div class="clearfix"></div>
-		    </div>
-		 </div>
-    </div>
-	<!-- team -->
-<div class="banner_bottom_agile_info team">
-	<div class="container">
-	            <h3 class="wthree_text_info">Our Team <span>Members</span></h3>
-			<div class="inner_w3l_agile_grids">
-					<div class="col-md-3 team-grids">
-						<div class="thumbnail team-w3agile">
-							<img src="{% static "img/default.png" %}" class="img-responsive" alt="">
-							<div class="social-icons team-icons right-w3l fotw33">
-							<div class="caption">
-								<h4>RoseMary Oketch</h4>
-								<p>Founder</p>
-							</div>
-								<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter">
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-							          </div>
-						     </div>
-			         	</div>
-						<div class="col-md-3 team-grids">
-						<div class="thumbnail team-w3agile">
-							<img src="{% static "img/softwareeng.jpg" %}"  class="img-responsive" alt="">
-							<div class="social-icons team-icons right-w3l fotw33">
-							<div class="caption">
-								<h4>Enock Omondi</h4>
-								<p>Software Engineer</p>
-							</div>
-								<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter">
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-							          </div>
-						     </div>
-			         	</div>
-						<div class="col-md-3 team-grids">
-						<div class="thumbnail team-w3agile">
-							<img src="{% static "img/leadsalesandmarketing.jpg" %}"  class="img-responsive" alt="">
-							<div class="social-icons team-icons right-w3l fotw33">
-							<div class="caption">
-								<h4>Lucy Saulinah</h4>
-								<p>Sales and marketing Lead</p>
-							</div>
-								<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter">
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-							          </div>
-						     </div>
-			         	</div>
-						<div class="col-md-3 team-grids">
-						<div class="thumbnail team-w3agile">
-							<img src="{% static "img/default.png" %}"  class="img-responsive" alt="">
-							<div class="social-icons team-icons right-w3l fotw33">
-							<div class="caption">
-								<h4>Renny Pascal</h4>
-								<p>In-house Designer</p>
-							</div>
-								<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter">
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-														</ul>
-							          </div>
-						     </div>
-			         	</div>
-					<div class="clearfix"> </div>
-				</div>
-	       </div>
+	<!-- <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../assets/img/bg9.jpg');">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-md-8 ml-auto mr-auto text-center">
+			<h1 class="title">About Us</h1>
+			<h4>Meet the amazing team behind this project and find out more about how we work.</h4>
+		  </div>
 		</div>
-<!-- //team -->
-	<!-- //we-offer -->
-<!--/grids-->
-<div class="coupons">
-	<div class="coupons-grids text-center">
-		<div class="w3layouts_mail_grid">
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-truck" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>FREE DELIVERY</h3>
-					<p>Free delivery of Items Within Nairobi</p>
-				</div>
+	  </div>
+	</div> -->
+	<div class="" style="margin-top: 50px">
+	  <div class="container">
+	
+		<div class="about-team team-1">
+		  <div class="row">
+			<div class="col-md-8 ml-auto mr-auto text-center">
+				<h2 class="title">About Us</h2>
+				<h4>Meet the amazing team behind this project and find out more about how we work.</h4>
 			</div>
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-headphones" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>24/7 SUPPORT</h3>
-					<p> seamless support, provided 24 hours a day and 7 days a week.NO Downtime </p>
-				</div>
 			</div>
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>DELIVERS WITHIN 48HRS </h3>
-					<p>24-48 Hours Product, Delivery Time! Great everyday value for money </p>
-				</div>
+			<div class="about-description text-center">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h5 class="description"><strong>Curio Effect </strong> is an African Online store, that provides an opportunity for our local artisans, fashion project owners and designers to showcase and sell their unique african designs ranging from furniture (home decor, office decor), Aparel, jewellery and so on. Offering customers Africa's diverse Fashion taste under one roof.</h5>
+          </div>
+        </div>
 			</div>
-				<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-gift" aria-hidden="true"></i>
+			
+		
+				<div class="col-md-8 ml-auto mr-auto text-center">
+					<h2 class="title">We bring you hand Picked awsome products</h2>
+					<h5 class="description">We welcome multiple merchants to add their unique line of products (Picked by our design team) to our repository, which then get displayed on our site, providing a single store where there is a union of African Fashion Products.</h5>
 				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>FREE GIFT COUPONS</h3>
-					<p>Free give aways to customers with coupon/promo code <strong>COMING SOON</strong></p>
+				<div class="row">
+				<div class="col-md-4">
+					<div class="info info-horizontal">
+					<!-- <div class="icon icon-rose">
+						<i class="material-icons">gesture</i>
+					</div> -->
+					<div class="description">
+						<h4 class="info-title">Authentic Design</h4>
+						<p>The moment you use Material Kit, you know you&#x2019;ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before. </p>
+
+					</div>
+					</div>
 				</div>
+				<div class="col-md-4">
+					<div class="info info-horizontal">
+					<!-- <div class="icon icon-rose">
+						<i class="material-icons">build</i>
+					</div> -->
+					<div class="description">
+						<h4 class="info-title">Unique Products</h4>
+						<p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="info info-horizontal">
+					<!-- <div class="icon icon-rose">
+						<i class="material-icons">mode_edit</i>
+					</div> -->
+					<div class="description">
+						<h4 class="info-title">Guarantee to last</h4>
+						<p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+
+					</div>
+					</div>
+				</div>
+				</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  <div class="row">
+			<div class="col-md-3">
+			  <div class="card card-profile card-plain">
+				<div class="card-avatar">
+				  <a href="#pablo">
+					<img class="img" src="../assets/img/faces/marc.jpg">
+				  </a>
+				</div>
+				<div class="card-body">
+				  <h4 class="card-title">Renny Pascal</h4>
+				  <h6 class="category text-muted">Founder</h6>
+				  <p class="card-description">
+					And I love you like Kanye loves Kanye. We need to restart the human foundation.
+				  </p>
+				</div>
+			  </div>
 			</div>
-			<div class="clearfix"> </div>
+			<div class="col-md-3">
+			  <div class="card card-profile card-plain">
+				<div class="card-avatar">
+				  <a href="#pablo">
+					<img class="img" src="../assets/img/faces/kendall.jpg">
+				  </a>
+				</div>
+				<div class="card-body">
+				  <h4 class="card-title">Lucy Saulinah</h4>
+				  <h6 class="category text-muted">Design Team Lead</h6>
+				  <p class="card-description">
+					Don't be scared of the truth because we need to restart the human foundation. And I love you like Kanye loves Kanye.
+				  </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div class="card card-profile card-plain">
+				<div class="card-avatar">
+				  <a href="#pablo">
+					<img class="img" src="../assets/img/faces/christian.jpg">
+				  </a>
+				</div>
+				<div class="card-body">
+				  <h4 class="card-title">Enock Omondi</h4>
+				  <h6 class="category text-muted">Software Engineer</h6>
+				  <p class="card-description">
+					I love you like Kanye loves Kanye. Don't be scared of the truth because we need to restart the human foundation.
+				  </p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-3">
+			  <div class="card card-profile card-plain">
+				<div class="card-avatar">
+				  <a href="#pablo">
+					<img class="img" src="../assets/img/faces/avatar.jpg">
+				  </a>
+				</div>
+				<div class="card-body">
+				  <h4 class="card-title">Davina Ato</h4>
+				  <h6 class="category text-muted">Sales Lead</h6>
+				  <p class="card-description">
+					Don't be scared of the truth because we need to restart the human foundation.
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</div>
 
+	
+		<div class="about-contact">
+		  <div class="row">
+			<div class="col-md-8 ml-auto mr-auto">
+			  <h2 class="text-center title">Want to work with us?</h2>
+			  <h5 class="text-center description">Contact us about any further collaboration. We will get back to you in a couple of hours.</h5>
+			  <form class="contact-form">
+				<div class="row">
+				  <div class="col-md-4">
+					<div class="form-group">
+					  <label for="name" class="bmd-label-floating">Your name</label>
+					  <input type="text" class="form-control">
+					</div>
+				  </div>
+				  <div class="col-md-4">
+					<div class="form-group">
+					  <label for="email" class="bmd-label-floating">Your Email</label>
+					  <input type="email" class="form-control">
+					</div>
+				  </div>
+				  <div class="col-md-4">
+					<select class="selectpicker " data-style="select-with-transition" data-size="7">
+					  <option value="1" disabled>Speciality</option>>
+					  <option value="2">I&apos;m a Designer</option>
+					  <option value="3">I&apos;m an Engineer</option>
+					  <!-- <option value="4">I&apos;m a </option> -->
+					</select>
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="col-md-4 ml-auto mr-auto text-center">
+					<button class="btn btn-primary btn-round">
+					  Let&apos;s talk
+					</button>
+				  </div>
+				</div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	</div>
-</div>
-<!--grids-->
-<!-- footer -->
+	<footer class="footer">
+	  <div class="container">
+		<!-- <nav class="float-left">
+		  <ul>
+			<li>
+			  <a href="https://www.creative-tim.com/">
+				Creative Tim
+			  </a>
+			</li>
+			<li>
+			  <a href="https://creative-tim.com/presentation">
+				About Us
+			  </a>
+			</li>
+			<li>
+			  <a href="http://blog.creative-tim.com/">
+				Blog
+			  </a>
+			</li>
+			<li>
+			  <a href="https://www.creative-tim.com/license">
+				Licenses
+			  </a>
+			</li>
+		  </ul>
+		</nav> -->
+		<div class="copyright pull-center">
+			Copyright &#xA9;
+			<script>
+				document.write(new Date().getFullYear())
+			</script> Curio effect powered by    <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+			</div>
+	  </div>
+	</footer>
+  
+  
+  
+  
+
+
+  
+
+  </body>
+  
 {% endblock %}

@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="{% static local_css_url %}">
 {% endfor %}
 
-{% for local_js_url in local_js_urls %}
+<!-- {% for local_js_url in local_js_urls %}
 <script src="{% static local_js_url %}"></script>
-{% endfor %}
+
+{% endfor %} -->
 
 
    <!-- //for bootstrap working -->
@@ -28,7 +29,8 @@
     <script>
         UPLOADCARE_PUBLIC_KEY = "4b92b91744f8fad64594";
       </script>
-      <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.6.0/uploadcare.full.min.js"></script>
+ <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.6.0/uploadcare.full.min.js"></script>
+
 </head>
 <body class="index-page sidebar-collapse">
 {% include 'shop/homepage/navbar.html' %}
@@ -42,6 +44,7 @@
 {% for local_js_url in local_js_urls %}
 <script src="{% static local_js_url %}"></script>
 {% endfor %}
+
 
 </body>
 </html>

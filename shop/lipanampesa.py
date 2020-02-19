@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 from requests.auth import HTTPBasicAuth
 import keys
-from cart.cart import Cart
+# from cart.cart import Cart
 
 
 unformatted_time = datetime.now()
@@ -42,7 +42,7 @@ def lipa_na_mpesa():
         "Password": decoded_password,
         "Timestamp": formatted_time ,
         "TransactionType": "CustomerPayBillOnline",
-        "Amount":  cart.get_total_price ,
+        "Amount":  "2500",
         "PartyA": keys.phone_number,
         "PartyB": keys.business_shortCode,
         "PhoneNumber": keys.phone_number,

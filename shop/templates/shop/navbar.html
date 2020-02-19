@@ -1,123 +1,270 @@
- <!-- End Google Tag Manager (noscript) -->
- <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
-    <div class="container">
+{% load static %}
+{% load bootstrap4 %}
+<nav>
 
-		
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="index.html">
-          Material Kit PRO </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-	  </div>
-	  
+<!--  header Login signup nav  ------------>
+<div class="header" id="home">
+	<div class="container">
+			<div class="col-md-4 logo_agile">
+          <a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:180px; height:100px "></a>
+
+				</div>
+		<ul class="nav navbar-right">
+				<li class="dropdown">
+			      	{% if request.user.is_authenticated %}
+					         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #ffffff">Welcome  {{ request.user.username }}<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+							     <li><a href="/logout" style="color:black">logout</a></li>
+							</ul>
+				</li>
+		</ul>
+					        	{% else %}
+	   <ul>
+		    <li> <a href="/accounts/login"><i aria-hidden="true"></i> Sign In </a></li>
+		   	<li> <a href="/admin"><i class="fa fa-unlock-alt"aria-hidden="true"></i>Admin Login</a></li>
+					          {% endif %}
+		</ul>
+	</div>
+</div>
+<!--  //end of header Login signup nav  ----------------------------------------->
 
 
+<!-- start of items navbar ------------------------------------------>
+<div class="ban-top" style="box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 12px -5px rgba(33, 33, 33, .46);">
+	<div class="container" >
+		<div class="top_nav_left">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
 
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Components
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="presentation.html" class="dropdown-item">
-                <i class="material-icons">layers</i> Presentation
-              </a>
-              <a href="index.html" class="dropdown-item">
-                <i class="material-icons">line_style</i> All Components
-              </a>
-              <a href="docs/2.1/getting-started/introduction.html" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Documentation
-              </a>
-            </div>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">view_day</i> Sections
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="sections.html#headers" class="dropdown-item">
-                <i class="material-icons">dns</i> Headers
-              </a>
-              <a href="sections.html#features" class="dropdown-item">
-                <i class="material-icons">build</i> Features
-              </a>
-              <a href="sections.html#blogs" class="dropdown-item">
-                <i class="material-icons">list</i> Blogs
-              </a>
-              <a href="sections.html#teams" class="dropdown-item">
-                <i class="material-icons">people</i> Teams
-              </a>
-              <a href="sections.html#projects" class="dropdown-item">
-                <i class="material-icons">assignment</i> Projects
-              </a>
-              <a href="sections.html#pricing" class="dropdown-item">
-                <i class="material-icons">monetization_on</i> Pricing
-              </a>
-              <a href="sections.html#testimonials" class="dropdown-item">
-                <i class="material-icons">chat</i> Testimonials
-              </a>
-              <a href="sections.html#contactus" class="dropdown-item">
-                <i class="material-icons">call</i> Contacts
-              </a>
-            </div>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">view_carousel</i> Examples
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="examples/about-us.html" class="dropdown-item">
-                <i class="material-icons">account_balance</i> About Us
-              </a>
-              <a href="examples/blog-post.html" class="dropdown-item">
-                <i class="material-icons">art_track</i> Blog Post
-              </a>
-              <a href="examples/blog-posts.html" class="dropdown-item">
-                <i class="material-icons">view_quilt</i> Blog Posts
-              </a>
-              <a href="examples/contact-us.html" class="dropdown-item">
-                <i class="material-icons">location_on</i> Contact Us
-              </a>
-              <a href="examples/landing-page.html" class="dropdown-item">
-                <i class="material-icons">view_day</i> Landing Page
-              </a>
-              <a href="examples/login-page.html" class="dropdown-item">
-                <i class="material-icons">fingerprint</i> Login Page
-              </a>
-              <a href="examples/pricing.html" class="dropdown-item">
-                <i class="material-icons">attach_money</i> Pricing Page
-              </a>
-              <a href="examples/shopping-cart.html" class="dropdown-item">
-                <i class="material-icons">shopping_basket</i> Shopping Cart
-              </a>
-              <a href="examples/ecommerce.html" class="dropdown-item">
-                <i class="material-icons">store</i> Ecommerce Page
-              </a>
-              <a href="examples/product-page.html" class="dropdown-item">
-                <i class="material-icons">shopping_cart</i> Product Page
-              </a>
-              <a href="examples/profile-page.html" class="dropdown-item">
-                <i class="material-icons">account_circle</i> Profile Page
-              </a>
-              <a href="examples/signup-page.html" class="dropdown-item">
-                <i class="material-icons">person_add</i> Signup Page
-              </a>
-              <a href="examples/error.html" class="dropdown-item">
-                <i class="material-icons">error</i> Error Page
-              </a>
-            </div>
-          </li>
-          <li class="button-container nav-item iframe-extern">
-            <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
-              <i class="material-icons">shopping_cart</i> Buy Now
-            </a>
-          </li>
-        </ul>
-      </div>
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+        </div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav menu__list">
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="{% url 'shop:home' %}">Home <span class="sr-only">(current)</span></a></li>
+					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:product_list' %}">Shop</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:about' %}">about</a></li>
+					<li class="dropdown menu__item">
+						<a href="{% url 'shop:mens' %}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Men's wear <span class="caret"></span></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="agile_inner_drop_nav_info">
+									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+										<a href="{% url 'shop:mens' %}"><img src="{% static "images/top2.jpg" %}" alt=" "/></a>
+									</div>
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="{% url 'shop:mens' %}">Clothing</a></li>
+											<li><a href="{% url 'shop:mens' %}">Wallets</a></li>
+											<li><a href="{% url 'shop:mens' %}">Footwear</a></li>
+											<li><a href="{% url 'shop:mens' %}">Watches</a></li>
+											<li><a href="{% url 'shop:mens' %}">Accessories</a></li>
+											<li><a href="{% url 'shop:mens' %}">Bags</a></li>
+											<li><a href="{% url 'shop:mens' %}">Caps & Hats</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href= "{% url 'shop:mens' %}">Jewellery</a></li>
+											<li><a href="{% url 'shop:mens' %}">Sunglasses</a></li>
+											<li><a href="{% url 'shop:mens' %}">Perfumes</a></li>
+											<li><a href="{% url 'shop:mens' %}">Beauty</a></li>
+											<li><a href="{% url 'shop:mens' %}">Shirts</a></li>
+											<li><a href="{% url 'shop:mens' %}">Sunglasses</a></li>
+											<li><a href="{% url 'shop:mens' %}">Swimwear</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</ul>
+					</li>
+					<li class="dropdown menu__item">
+						<a href="{% url 'shop:womens' %}" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Women's wear <span class="caret"></span></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="agile_inner_drop_nav_info">
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="{% url 'shop:womens' %}" >Clothing</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Wallets</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Footwear</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Watches</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Accessories</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Bags</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Caps & Hats</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="{% url 'shop:womens' %}" >Jewellery</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Sunglasses</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Perfumes</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Shirts</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Sunglasses</a></li>
+											<li><a href="{% url 'shop:womens' %}" >Swimwear</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 multi-gd-img multi-gd-text ">
+										<a href="{% url 'shop:womens' %}" ><img src="{% static "images/loginpic.jpeg" %}" alt=" "/></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</ul>
+					</li>
+					<li class="menu__item dropdown">
+					   <a class="menu__link" href="{% url 'shop:homeaccesories' %}" class="dropdown-toggle" data-toggle="dropdown">Home & Decor <b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="{% url 'shop:homeaccesories' %}">Home Accesories</a></li>
+									<li><a href="{% url 'shop:decorbeauty' %}">Decor & Beauty</a></li>
+								</ul>
+					</li>
+					<li class=" menu__item"><a class="menu__link" href="{% url 'shop:contact' %}">Contact</a></li>
+				  </ul>
+          <div class="top_nav_right">
+            <div class="box_1">
+
+              {% with totail_items=cart|length %}
+                  {% if cart|length > 0 %}
+                      My Shopping Order:
+                      <a href="{% url "cart:cart_detail" %}" >
+                          {{ totail_items }} <button type="button" class="btn btn-primary btn-lg">item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}</button>
+                      </a>
+                      {% else %}
+                      Your cart is empty.  {{ totail_items }}  {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                  {% endif %}
+              {% endwith %}
+
+                  </div>
+          </div>
+				</div>
+			  </div>
     </div>
-  </nav>
+
+		<!-- end of item list navbar --------------------------->
+
+		<!-- login modal form Modal1 -------------------------------------->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+							<div class="modal-body modal-body-sub_agile">
+							<div class="col-md-8 modal_body_left modal_body_left1">
+							<h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+										<form action ="/accounts/login/" method="post">
+								<div class="styled-input agile-styled-input-top">
+									<input type="text" name="Name" required="">
+									<label>Name</label>
+									<span></span>
+								</div>
+								<div class="styled-input">
+									<input type="email" name="Email" required="">
+									<label>Email</label>
+									<span></span>
+								</div>
+								<input type="submit" value="Sign In">
+							</form>
+							<br>
+							<strong>or Sign in using</strong>
+							<ul class="">
+								<li><a href="#" class="facebook">
+									  
+									  <div class="Front"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="twitter">
+									 
+									  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="instagram">
+									 
+									  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="pinterest">
+									  
+									  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                              </ul>
+															<div class="clearfix"></div>
+															<p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+
+							</div>
+							<div class="col-md-4 modal_body_right modal_body_right1">
+								<img src="{% static "images/loginpic.jpeg" %}" alt=" "/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<!-- //Modal content-->
+				</div>
+			</div>
+
+		</nav>
+	<!-- //Modal1 -->
+	<!-- Modal2 -->
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+							<div class="modal-body modal-body-sub_agile">
+							<div class="col-md-8 modal_body_left modal_body_left1">
+							<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+							 <form action"/accounts/register/" method="post">
+								<div class="styled-input agile-styled-input-top">
+									<input type="text" name="Name" required="">
+									<label>Name</label>
+									<span></span>
+								</div>
+								<div class="styled-input">
+									<input type="email" name="Email" required="">
+									<label>Email</label>
+									<span></span>
+								</div>
+								<div class="styled-input">
+									<input type="password" name="password" required="">
+									<label>Password</label>
+									<span></span>
+								</div>
+								<div class="styled-input">
+									<input type="password" name="Confirm Password" required="">
+									<label>Confirm Password</label>
+									<span></span>
+								</div>
+								<input type="submit" value="Sign Up">
+							</form>
+							<br>
+							 <strong>or Sign in using</strong>
+							 <ul class="">
+								<li><a href="#" class="facebook">
+									  
+									  <div class="Front"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="twitter">
+									 
+									  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="instagram">
+									 
+									  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+								<li><a href="#" class="pinterest">
+									  
+									  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                              </ul>
+															<div class="clearfix"></div>
+															<p><a href="#">By clicking register, I agree to your terms</a></p>
+
+							</div>
+							<div class="col-md-4 modal_body_right modal_body_right1">
+								<img src="{% static "images/loginpic.jpeg" %}"alt=" "/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<!-- //Modal content-->
+				</div>
+			</div>
+	<!-- //Modal2 -->
