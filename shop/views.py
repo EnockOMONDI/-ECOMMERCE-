@@ -96,6 +96,14 @@ def minicategory_list(request, subcategory_slug=None):
     return render(request, 'shop/product/minilist.html', context)
 
 # @login_required(login_url='/accounts/login/')
+# def product_detail(request, id, slug):
+#     product = get_object_or_404(Product, id=id, slug=slug, available=True)
+#     cart_product_form = CartAddProductForm()
+#     context = {
+#         'product': product,
+#         'cart_product_form': cart_product_form
+#     }
+#     return render(request, 'shop/product/detail.html', context)
 def product_detail(request, id, slug):
     product = get_object_or_404(Product, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()
@@ -130,7 +138,6 @@ def product_detail(request, id, slug):
                            "js3/plugins/jasny-bootstrap.min.js"],
     })
 
- 
 
 # homepage view
 
