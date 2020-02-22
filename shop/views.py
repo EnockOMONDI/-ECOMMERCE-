@@ -5,39 +5,25 @@ from django.contrib.auth.decorators import login_required
 from .forms import NewsLetterForm
 
 # @login_required(login_url='/accounts/login/')
-def product_list(request,category_slug=None,subcategory_slug=None,minicategory_slug=None):
+def product_list(request,category_slug=None,):
     category = None
-    subcategory = None
-    minicategory = None
     categories = Category.objects.all()
-    subcategories = SubCategory.objects.all()
-    minicategories = MiniCategory.objects.all()
     products = Product.objects.filter(available=True)
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        subcategory = get_object_or_404(SubCategory, slug=subcategory_slug)
-        minicategory = get_object_or_404(MiniCategory, slug=minicategory_slug)
         products = Product.objects.filter(category=category)
 
     context = {
         'category': category,
         'categories': categories,
         'products': products,
-        'subcategories': subcategories,
-        'minicategories ': minicategories ,
-        'subcategory': subcategory,
-        'minicategory': minicategory ,
+  
     }
 
     return render(request, 'shop/product/list.html',   context = {
         'category': category,
         'categories': categories,
-        'products': products,
-        'subcategories': subcategories,
-        'minicategories ': minicategories ,
-        'subcategory': subcategory,
-        'minicategory': minicategory ,
-  
+        'products': products,  
         'tab': 'shop',
         'local_css_urls': ["css3/easy-responsive-tabs.css",
                             "css3/material-kit.min1036.css",
@@ -63,8 +49,13 @@ def product_list(request,category_slug=None,subcategory_slug=None,minicategory_s
     })
 
 
-def subcategory_list(request, category_slug=None):
+
+
+
+def subcategory_list(request, category_slug=None,subcategory_slug=None,minicategory_slug=None):
     category = None
+    subcategory = None
+    minicategory = None
     categories = Category.objects.all()
     subcategories = SubCategory.objects.filter(available=True)
     if category_slug:
