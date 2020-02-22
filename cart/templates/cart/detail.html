@@ -1,4 +1,4 @@
-{% extends 'shop/base.html' %}
+{% extends 'shop/base2.html' %}
 {% load static %}
 {% block title %}
     Your Shopping Cart
@@ -6,71 +6,193 @@
 
 
 {% block content %}
-    <div class="container" >
-        <div class="row" style="margin-top: 4%" >
-        <h3>
-            <span class=>
-                {% with totail_items=cart|length %}
-                    {% if cart|length > 0 %}
-                        My Shopping Order:
-                        <a href="{% url "cart:cart_detail" %}" style="color: #2fdab8">
-                            {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
-                        </a>
-                        {% else %}
-                        Your cart is empty.
-                    {% endif %}
-                {% endwith %}
-            </span>
-        </h3>
-            <table class="table table-striped table-hover" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
-                <thead style="background-color: #2fdab8">
-                    <tr>
+<br><br><br><br>
+
+
+<div class="px-4 px-lg-0">
+ 
+        <div class="pb-5">
+
+    <div class="container">
+    <div class="row py-4 p-4 bg-white rounded shadow-sm">
+      <div class="card card-plain">
+        <div class="card-body">
+ {% with totail_items=cart|length %}
+    {% if cart|length > 0 %}
+                    <!-- My Shopping Order:
+                    <a href="{% url "cart:cart_detail" %}" style="color: #2fdab8">
+                        {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                    </a> -->
+              
+          <h4 class="card-title"><strong class="text-muted">My Shopping Cart : {{ totail_items }} item {{ totail_items|pluralize }}, KSH {{ cart.get_total_price }}</strong> </h4>
+          <button type="button" class="btn btn-link ">
+                <a href="{% url 'shop:product_list' %}"> Continue  Shopping <i class="material-icons">keyboard_arrow_right</i>  </a> 
+            </button>
+          {% else %}
+          <h4 class="card-title" >Your cart is empty</h4>
+          <button type="button" class="btn btn-link ">
+            <a href="{% url 'shop:product_list' %}">Shop Now <i class="material-icons">keyboard_arrow_right</i>  </a> 
+        </button>
+      {% endif %}
+  {% endwith %}
+          <br/>
+          <div class="table-responsive">
+            <table class="table table-shopping">
+              <thead>
+                <tr>  
                         <th>Image</th>
                         <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Remove</th>
-                        <th>Unit Price</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for item in cart %}
+                        <th class="th-description">Color</th>
+                        <th class="th-description">Size</th>
+                        <th class="text-right">Unit Price</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-right">Amount</th>
+                    
+                </tr>
+              </thead>
+              <tbody>
+                    {% for item in cart %}
                     {% with product=item.product  %}
-                        <tr>
-                            <td>
-                                <a href="{{ product.get__absolute_url }}">
-                                    <img src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 130px; width: auto">
+                <tr>
+                  <td>
+                    <div class="img-container">
+                            <div class="card-header card-header-image">
+                            <a href="{{ product.get_absolute_url }}">
+                                    <img class="img" src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 130px; width: auto">
                                 </a>
-                            </td>
-                            <td>{{ product.name }}</td>
-                            <td>
-                                <form action="{% url "cart:cart_add" product.id %}" method="post">
+                    </div>
+                </div>
+                  </td>
+                  <td class="td-name">
+                    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                    <br />
+                    <!-- <small>by Dolce&Gabbana</small> -->
+                  </td>
+                  <td>
+                    Red
+                  </td>
+                  <td>
+                    M
+                  </td>
+                  <td class="td-number text-right">
+                    <small>KSH</small> <strong class="text-muted">{{ item.price }}</strong>
+                  </td>
+                  <td class="td-name">
+             
+                    <div class="btn-group btn-group-sm">
+                            <form action="{% url "cart:cart_add" product.id %}" method="post">
                                     {% csrf_token %}
                                     {{ item.update_quantity_form.quantity }}
-                                    {{ item.update_quantity_form.update }}
-                                    <input type="submit" value="Update" class="btn btn-info" >
+                                      {{ item.update_quantity_form.update }}
+                                    <input type="submit" value="Update item" class="btn btn-info btn-round" >
                                 </form>
-                            </td>
-                            <td>
-                                <a href="{% url "cart:cart_remove" product.id %}">Remove Item</a>
-                            </td>
-                            <td>kshs. {{ item.price }}</td>
-                            <td>kshs. {{ item.total_price }}</td>
-                        </tr>
-                    {% endwith %}
-                {% endfor %}
-                <tr style="background-color: #2fdab8">
-                    <td><b>Total</b></td>
-                    <td colspan="4"></td>
-                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                      <!-- <button class="btn btn-round btn-info"> <i class="material-icons">remove</i> </button>
+                      <button class="btn btn-round btn-info"> <i class="material-icons">add</i> </button> -->
+                    </div>
+                  </td>
+                  <td class="td-number">
+                    <small>KSH</small> <strong class="text-muted">{{ item.total_price }}</strong> 
+                  </td>
+                  <td class="td-actions">
+                    <button type="button" rel="tooltip" data-placement="left" title="Remove item" class="btn btn-link">
+<a href="{% url "cart:cart_remove" product.id %}">Remove Item  <i class="material-icons">close</i>  </a>  
+                    </button>
+                  </td>
                 </tr>
-                </tbody>
+                {% endwith %}
+                {% endfor %}
+                <tr>
+                  <td colspan="1"></td>
+                  <td class="td-total">
+                  
+                  </td>
+                  <td colspan="3" class="td-price">
+                        <h4 class="card-title" >  <strong class="text-muted">Total KSH {{ cart.get_total_price }} </strong>  </h4>
+                          
+                  </td>
+                  <td colspan="1"></td>
+                  <td colspan="2" class="text-right">
+                        <a href="{% url "orders:order_create" %}" class="btn btn-info btn-round" >Complete Purchase <i class="material-icons">keyboard_arrow_right</i></a>
+                 
+                  </td>
+        
+                </tr>
+                <!-- <tr>
+                <td colspan="6"></td>
+                <td colspan="2" class="text-right">
+                  <button type="button" class="btn btn-info btn-round">Complete Purchase <i class="material-icons">keyboard_arrow_right</i></button>
+                </td>
+              </tr> -->
+              </tbody>
             </table>
-        <p class="text-right">
-            <a href="{% url "shop:product_list" %}" class="btn btn-danger" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">Continue Shopping</a>
-            <a href="{% url "orders:order_create" %}" class="btn btn-info" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">Checkout</a>
-        </p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="px-4 px-lg-0">
+ 
+        <div class="pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                    <div class="copyright text-center">
+                            Copyright &#xA9;
+                            <script>
+                              document.write(new Date().getFullYear())
+                            </script> Curio effect powered by    <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+                          </div>
+              </div>
+            </div>
+      
+            <!-- <div class="row py-5 p-4 bg-white rounded shadow-sm">
+              <div class="col-lg-6">
+                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
+                <div class="p-4">
+                  <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+                  <div class="input-group mb-4 border rounded-pill p-2">
+                    <input type="text" placeholder="Apply coupon" aria-describedby="button-addon3" class="form-control border-0">
+                    <div class="input-group-append border-0">
+                      <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Apply coupon</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
+                <div class="p-4">
+                  <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
+                  <textarea name="" cols="30" rows="2" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                <div class="p-4">
+                  <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+                  <ul class="list-unstyled mb-4">
+                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
+                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
+                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
+                    <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
+                      <h5 class="font-weight-bold">$400.00</h5>
+                    </li>
+                  </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</a>
+                </div>
+              </div>
+            </div>
+       -->
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+ 
 
 {% endblock %}

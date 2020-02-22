@@ -11,15 +11,24 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
     <link rel="shortcut icon" type="image/png" href="{% static 'images/u.png' %}"/>
+    <!-- <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/style.css?version=10.3">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/color.css">
+  
+    <link rel="shortcut icon" href="https://i.imgur.com/msO7f5I.png">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1568904751/balloon.min.css">
+ -->
 
+  
+    <script src="https://bbbootstrap.com/assets/js/notify.js?v=1"></script>
+    <script src="https://bbbootstrap.com/assets/js/imgur.js?v=1"></script>
 
     {% for local_css_url in local_css_urls %}
     <link rel="stylesheet" href="{% static local_css_url %}">
 {% endfor %}
 
-{% for local_js_url in local_js_urls %}
-<script src="{% static local_js_url %}"></script>
-{% endfor %}
+
 
    <!-- //for bootstrap working -->
    <link href="https://fonts.googleapis.com/css?family=Caveat|Gloria+Hallelujah|Handlee|Modak|Nanum+Pen+Script|Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -50,3 +59,4 @@
 
 </body>
 </html>
+

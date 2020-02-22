@@ -28,8 +28,8 @@
             infinite: true,
             navigationTargetSelector: null,
             autoPlay: {
-                enable: false,
-                interval: 5000,
+                enable: true,
+                interval: 2000,
                 pauseOnHover: true
             },
             responsiveBreakpoints: {
