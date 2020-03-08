@@ -7,14 +7,52 @@
 {% block content %}
  
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 <div class="container">
+
+            
+        <div class="row mr-auto pt-8 pt-lg-0">
+           
+                <div class="col-md-4 ml-auto mr-auto text-center">
+                
+                        <button type="button" class="btn btn-white">  Categories</button>
+                    
+                      </div>
+                <div class="dropdown show">
+                        {% for c in categories %}
+                        <a class="btn btn-sm btn-white  dropdown-toggle" style="color:rgb(0, 255, 255); background-color:#ffffff " href="#"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ c.name}}
+                        </a>
+                      
+                        {% endfor %}    
+                               
+                              
+            
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+                <!-- <div class="col-md-12 ml-auto ">
+                       <ul class="nav flexi-nav text-center" data-tabs="tabs" id="flexiselDemo1">
+                    
+                               <li class="nav-item">
+                                    {% for c in categories %}
+                                       <button class="btn btn-sm btn-white  "> <a  href="{{ product.category.get_absolute_url }}">{{ c.name}} <i class="material-icons">keyboard_arrow_right</i> </a></button>
+                                       {% endfor %}
+                               </li>
+                              
+                             </ul>
+                  </div> -->
+
+        </div>
     <div class="row">
-        <div class="col-12 col-sm-3">
+        <!-- <div class="col-12 col-sm-3">
             <div class="card card-nav-tabs card-plain ">
                 <div class="card-header card-header-success"> 
-                  <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
                   <div class="nav-tabs-navigation  ">
                     <div class="nav-tabs-wrapper">
                       <ul class="nav nav-tabs" data-tabs="tabs">
@@ -24,7 +62,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-body" style="color:rgb(235, 235, 235)">
+                <div class="" >
                   <div class="tab-content text-center">
                     <div class="tab-pane active" >
                         <li class="nav-link " {% if not category %} class="active"{% endif %}>
@@ -41,13 +79,13 @@
                 </div>
               </div>
         
-        </div>
+        </div> -->
         <div class="col">
             <div class="row">
                 {% for product in products %}  
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-3">
              
-                    <div class="card card-blog">
+                    <div class="card  ">
                         <div class="card-header card-header-image">
                           <a href="#pablo">
                             <img class="img" src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" >
@@ -66,10 +104,12 @@
                           <a href="{{ product.get_absolute_url }}" >
                               <i class="material-icons">explore</i> Quick view
                             </a>
+                      
                             <a href="{{ product.get_absolute_url }}"><input type="submit" name="submit" value="Add to cart" class="btn  btn-primary  btn-round btn-block" />
                               
                             </a>
-                        </div>
+                
+                    </div>
                  
                            
              

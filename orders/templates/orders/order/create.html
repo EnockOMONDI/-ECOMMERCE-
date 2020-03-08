@@ -6,36 +6,425 @@
 {% endblock %}
        
 {% block content %}
+<br><br><br><br><br><br>
+<style>
+.card0 {
+    margin: 50px 12px 40px 12px;
+    border: 0
+}
 
-    <div class="container">
-        <div class="row" style="margin-top: 6%">
-            <div class="col-md-8">
-                <h4 class="page-header">Checkout</h4>
-                <form style="margin:10%;margin-top:0;font-size:15px;"action="." method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}<br>
-                    <div class="social-btn" >
-                    <input type="submit" class="btn btn-primary btn-lg" value="Submit order">
-               </div>
-                </form>
-            </div>
-            <div class="col-md-4">
-                <div class="page-header">
-                    Your Order
-                </div>
-                <ul class="list-group">
-                    {% for item in cart %}
-                        <li class="list-group-item">
-                       <h3>{{ item.quantity }}x {{ item.product.name }}</h3> 
+.card1 {
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important
+}
+
+#sub-heading1 {
+    font-size: 55px
+}
+
+#sub-heading2 {
+    font-size: 20px;
+    color: grey
+}
+
+.gift-input {
+    background: none
+}
+
+#heading {
+    font-size: 33px;
+    color: #000000;
+    padding-bottom: 20px
+}
+
+.placeicon {
+    font-family: fontawesome !important
+}
+
+.card2 {
+    padding: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 0;
+    height: 100%;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important
+}
+
+.text-dark {
+    color: grey !important
+}
+
+.form-card {
+    height: 100%;
+    position: relative
+}
+
+.form-card input,
+.form-card textarea {
+    padding: 5px 1px 10px 1px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-radius: 0px;
+    margin-bottom: 35px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 1.5px solid skyblue;
+    padding-bottom: 9.5px;
+    outline-width: 0
+}
+
+.form-card .btn-success {
+    color: #ffffff !important;
+    margin-bottom: 25px !important;
+    font-weight: 300;
+    width: 100%;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    font-family: Trebuchet MS !important
+}
+
+.bottom {
+    bottom: 0;
+    position: absolute;
+    width: 100%
+}
+
+@media (max-width: 768px) {
+    .bottom {
+        position: relative
+    }
+
+    .card1 {
+        padding-right: 15px;
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important
+    }
+
+    .card2 {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important
+    }
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 64;
+    border-radius: 0;
+    background: #B2EBF2;
+    box-sizing: border-box;
+    border-top: 3px solid #E8F5E9;
+    cursor: pointer;
+    margin: 8px 0px 8px 0px;
+    transition: 0.3s
+}
+
+.radio:hover {
+    border-top: 3px #B2EBF2 solid;
+    transition: 0.3s
+}
+
+.radio.selected {
+    border-top: 3px solid #0091EA;
+    transition: 0.3s
+}
+</style>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-12 col-lg-10 col-xl-10">
+              
+            <div class="row">
+                <div class="col-md-6 d-block p-0 box">
+                        <div class="col-lg-11 p-2 bg-white rounded shadow-sm ">
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                    <h3 class="card-title text-center">Your order details</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12 ml-auto ">
+                                        <ul class="nav flexi-nav justify-content-center" data-tabs="tabs" id="flexiselDemo1">
+
+                                        {% for item in cart %}
+                                        {% with product=item.product  %}
+                                           <li class="nav-item">
+                                                         <div class="text-center " >
+                                                   <div class="card-header card-header-image ">      <img class="img" src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 50px; width: auto"><button class="btn btn btn-white ">  {{ product.name }} <strong>( {{ item.quantity }} )</strong> </button> 
+                                                     <button class="btn btn btn-white ">KSH  {{ item.price }} </button>
+                                                   </div>
+                                               </div>
+
+                                           </li>
+    
+                                           {% endwith %}
+                                           {% endfor %}
+                                        {% with totail_items=cart|length %}
+                                        {% if cart|length > 0 %}
+                                            <li class="nav-item">
+                                                    <h4>       <i class="material-icons">check_circle</i> <strong> Your Order</strong>  <button class="btn btn btn-white ">  {{ totail_items }} item {{ totail_items|pluralize }}</button>     </h4>       
+                                               </li>
+                                               <li class="nav-item">
+                                                    <h4>   <i class="material-icons">check_circle</i> <strong>Subtotal  </strong>  <button class="btn btn btn-white ">   KSH {{ cart.get_total_price }}</button> </h4>
+                                              
+                                               </li>
+                                               {% else %}
+                                               <li class="nav-item">
+                                              <h4>   <i class="material-icons">close</i> <strong>Items</strong>   <button class="btn btn btn-white "> <a  href=""> No Items found</a></button>   </h4>           
+                                               </li>
+                                               {% endif %}
+                                               {% endwith %}
+                                            
+                                           
+                                            
+                                            </ul>
+                                  </div>
+
+                         </div>
+                         <hr>
+                  
+                        <div class="row justify-content-center">
+                            
+                                        <div class="col-12 ">
+                                                <h3   class="card-title text-center">Curio Effect Secure Checkout <i class="material-icons"> thumb_up_alt</i>  </h3>
+                                        </div>
+                                    
+                            <div class="col-5 fit-image"> <img src="../../static/img/curr.png "height="200px" width="200"> </div>
+                   
                        
-                        </li>
-                    {% endfor %}
-<br>
-                <li class="btn btn-primary btn-lg">Total Cost: kshs. {{ cart.get_total_price }}</li>
-                </ul>
+                           
+                        </div>
+                        <div class="row  ">
+                                <div class="col-md-12 ml-auto ">
+                                        <h4 class="card-title text-center"> <i class="material-icons"> payment</i><small> Secure Curio Effect Accepted payment methods</small> </h4>   
+                                        <ul class="nav flexi-nav justify-content-center" data-tabs="tabs" id="flexiselDemo1">
+                                               <li class="nav-item">
+                                                    <div class='radio' data-value="credit"><img src="../../static/img/m.png " width="200px" height="60px"></div>
+                                               </li>
+                                               <li class="nav-item">
+                                                    <div class='radio' data-value="paypal"><img src="../../static/img/p.png" width="200px" height="60px"></div> <br>
+                                               </li>
+                                        </ul>
+                                  </div>
 
+                          
+                            </div>
+                            <div class="row  text-center">
+                            <div class="col-md-12 ml-auto ">
+                            <button class="btn btn-lg btn-white  "> <a  href="{{ product.category.get_absolute_url }}">{{ product.category }} <i class="material-icons">
+                                    edit
+                                    </i> MODIFY CART </a></button>
+                        </div>
+                        <div class="col-12 ">
+                        </div>
+                    </div>
+                </div>
+               
+                </div>
+
+                <hr>
+                <div class="col-md-6 d-block p-0 box">
+                        <div class="col-lg-11 p-2 bg-white rounded shadow-sm ">              
+                                <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <br>
+                                                <div class="row justify-content-center">
+                                                <i class="material-icons " >local_shipping </i>
+                                               </div>
+                                                <h3  class="card-title text-center">        <strong>Enter your Delivery Address Details</strong></h3>
+                                                <!-- <h4  class="card-title text-center">
+                                                       </h3> -->
+                                                <form class="form-card p-4 pl-5">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <div class="col-12"> <label class="gift">First name</label> </div>
+                                                                    <div class="col-12"> <input class="gift-input" type="text" name="to" placeholder=""> </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="row">
+                                                                    <div class="col-12"> <label class="gift">Second Name</label> </div>
+                                                                    <div class="col-12"> <input class="gift-input" type="text" name="from" placeholder=""> </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12"> <label class="gift">Your email</label><br> <input class="gift-input" type="email" name="email" placeholder="example@mail.com"> </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12"> <label class="gift">Mobile number</label><br> <input class="gift-input" type="text" name="msg" placeholder=""> </div>
+                                                        </div>
+                                                        <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-12"> <label class="gift">County</label> </div>
+                                                                        <div class="col-12"> <input class="gift-input" type="text" name="to" placeholder=""> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-12"> <label class="gift">Area/Region</label> </div>
+                                                                        <div class="col-12"> <input class="gift-input" type="text" name="from" placeholder=""> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                    <div class="col-12"> <label class="gift">Delivery Address/House No /App No</label><br> <input class="gift-input" type="text" name="msg" placeholder="Try to be as accurate as possible"> </div>
+                                                                </div>
+                                                                <div class="col-12 text-center">
+                                                                        <select class="selectpicker" data-style="select-with-transition" multiple title="Choose Method" data-size="7">
+                                                                          <option disabled> Choose Method</option>
+                                                                          <option value="2"> Curio XP (Same day delivery) </option>
+                                                                          <option value="3">Curio DELI (Two - Three days) </option>
+                                                                        
+                                                                        </select>
+                                        
+                                                                      </div> 
+                                                                      <div class="social-btn" >
+                                                                            <input type="submit" class="btn btn-primary btn-lg" value="Proceed to payment">
+                                                                       </div>
+                                                                       <!-- <form style="margin:10%;margin-top:0;font-size:15px;"action="." method="post">
+                                                                            {% csrf_token %}
+                                                                            {{ form.as_p }}<br>
+                                                                            <div class="social-btn" >
+                                                                            <input type="submit" class="btn btn-primary btn-lg" value="Proceed to payment">
+                                                                       </div>
+                                                                        </form> -->
+                                                   
+                                                                    </form>
+                                        </div>
+                                    </div>
+                        </div>
+                 </div>
+                </div>
+<!-- end of first row -->
+
+      
+
+
+                        
+                 </div>
+                 </div>
+                 </div>
+
+      <div class="features text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="info">
+                  <div class="icon icon-info">
+                     
+                        <i class="material-icons">timer</i>
+                  </div>
+                  <h4 class="info-title">Curio XP delivery </h4>
+                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                </div>
+              </div>
+         
+              <div class="col-md-4">
+                <div class="info">
+                  
+                  <div class="icon icon-info">
+                    <i class="material-icons">local_shipping</i>
+                  </div>
+                  <h4 class="info-title">Curio DELI delivery</h4>
+                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                    <div class="info">
+                      <div class="icon icon-info">
+                            <i class="material-icons">account_balance_wallet</i>
+                      </div>
+                      <h4 class="info-title">Refund Policy</h4>
+                      <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                    </div>
+                  </div>
             </div>
-        </div>
-       
+          </div>
+
     </div>
+  </div>
+
+
+  <div class="px-4 px-lg-0">
+ 
+      <div class="pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+                  <div class="copyright text-center">
+                          Copyright &#xA9;
+                          <script>
+                            document.write(new Date().getFullYear())
+                          </script> Curio effect powered by    <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+                        </div>
+
+                 <!-- <div class="container-fluid">
+                        <div class="row justify-content-center">
+                                <div class="col-12 col-sm-10 col-md-12 col-lg-10 col-xl-10"> 
+                                        <div class="row">
+                                                <div class="col-md-6 col-sm-12 p-0 box">
+                                                        <div class="col-lg-11 p-2 bg-white rounded shadow-sm ">
+                                                              <div class="row">
+                                                              
+                                                              </div>
+                                                  
+                                                        </div>
+                                                  </div>
+                                                  <div class="col-md-6 col-sm-12 p-0 box">
+                                                        <div class="col-lg-11 p-2 bg-white rounded shadow-sm ">
+                                                              <div class="row">
+                                                             
+                                                              </div>
+                                                  
+                                                        </div>
+                                                  </div>
+                                          </div>
+
+                                
+
+                                  </div>
+                            </div>
+                    </div> -->
+
+
+
+
+
 {% endblock %}

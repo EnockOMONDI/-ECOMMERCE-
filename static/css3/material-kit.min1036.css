@@ -2358,15 +2358,15 @@ fieldset:disabled a.btn {
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show>.btn-secondary.dropdown-toggle {
-   color: #fff;
-   background-color: #545b62;
-   border-color: #4e555b
+   color: rgb(0, 0, 0);
+   background-color: #ffffff;
+   border-color: #ffffff
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active:focus,
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-secondary.dropdown-toggle:focus {
-   box-shadow: none, 0 0 0 .2rem hsla(208, 7%, 46%, .5)
+   box-shadow: none, 0 0 0 .2rem rgb(255, 255, 255)
 }
 
 .btn-success {
@@ -8565,7 +8565,7 @@ button:focus {
 .show>.btn.btn-secondary.dropdown-toggle {
    color: rgba(0, 0, 0, .87);
    background-color: #f2f2f2;
-   border-color: #adadad;
+   border-color: #ffffff;
    box-shadow: 0 2px 2px 0 hsla(0, 0%, 98%, .14), 0 3px 1px -2px hsla(0, 0%, 98%, .2), 0 1px 5px 0 hsla(0, 0%, 98%, .12)
 }
 
@@ -8582,13 +8582,13 @@ button:focus {
 .show>.btn.btn-secondary.dropdown-toggle:focus,
 .show>.btn.btn-secondary.dropdown-toggle:hover {
    color: rgba(0, 0, 0, .87);
-   background-color: #f2f2f2;
-   border-color: #8c8c8c
+   background-color: #ffffff;
+   border-color: #ffffff
 }
 
 .open>.btn.btn-secondary.dropdown-toggle.bmd-btn-icon {
    color: inherit;
-   background-color: #fafafa
+   background-color: #ffffff
 }
 
 .open>.btn.btn-secondary.dropdown-toggle.bmd-btn-icon:hover {
@@ -15290,12 +15290,12 @@ h2.title {
 
 .form-group.is-focused .togglebutton label,
 .togglebutton label {
-   color: rgba(0, 0, 0, .26)
+   color: rgb(255, 255, 255)
 }
 
 .form-group.is-focused .togglebutton label:focus,
 .form-group.is-focused .togglebutton label:hover {
-   color: rgba(0, 0, 0, .54)
+   color: rgb(255, 255, 255)
 }
 
 fieldset[disabled] .form-group.is-focused .togglebutton label {

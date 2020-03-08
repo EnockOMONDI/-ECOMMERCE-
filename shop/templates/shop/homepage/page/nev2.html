@@ -12,7 +12,12 @@
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<i class="fas fa-bars"></i> Categories
+		<!-- <span class="sr-only" style="color :black"></span> -->
+		<span class="navbar-toggler-icon"></span>
+		<span class="navbar-toggler-icon"></span>
+		<span class="navbar-toggler-icon"></span>
 		</button>
+	
 
 
 
@@ -30,10 +35,11 @@
 		<div class="d-lg-flex flex-row">
 		<div class="dropdown-themes-callout d-none d-lg-flex p-5 text-center text-black align-items-center">
 		<div>
-				<a href="{{ c.get_absolute_url }}" ><img  style="width:50%" src="{% if category.image %} {{ category.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"  alt=" "/></a>
+				<img style="width:60%" src="{% if c.image %} {{ c.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" >
+				<!-- <a href="{{ c.get_absolute_url }}" ><img  style="width:50%" src="{% if category.image %} {{ category.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"  alt=" "/></a> -->
 
 		<!-- <h5>Bootstrap Themes</h5> -->
-		<p>{{c.description}}</p>
+		<p>{{c.title}}</p>
 		<a href="{{ c.get_absolute_url }}"  class="btn btn-theme btn-xl">Browse All {{c}} <i class="fas fa-angle-right"></i></a>
 		</div>
 		</div>
