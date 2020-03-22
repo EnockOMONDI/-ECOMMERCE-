@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Currio effect Uniquiely made">
+    <meta name="keywords" content="online shop, kenya online shop, african funiture, unique faniture designs, african designs">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <title>{% block title %}Currio effect - Uniquely Made{% endblock %}</title>  <!--Curio On-line -->
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/u.png' %}"/>
+  
+    <link rel="stylesheet" href="{% static 'css/carouselstyles.css' %}">
+
+
+</head>
+<body>
+    
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<script>
+
+
+        /*
+            Carousel
+        */
+        $('#carousel-example').on('slide.bs.carousel', function (e) {
+            /*
+                CC 2.0 License Iatek LLC 2018 - Attribution required
+            */
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 5;
+            var totalItems = $('.carousel-item').length;
+         
+            if (idx >= totalItems-(itemsPerSlide-1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i=0; i<it; i++) {
+                    // append slides to end
+                    if (e.direction=="left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    }
+                    else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

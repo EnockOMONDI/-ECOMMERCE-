@@ -1,0 +1,140 @@
+{% extends 'shop/base2.html' %}
+{% load static %}
+
+{% block title %}
+    {% if category %}{{ category.name }} {% else %} Products {% endif %}
+{% endblock %}
+{% block content %}
+ 
+
+<br><br><br><br><br><br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-3">
+            <div class="card card-nav-tabs card-plain ">
+                <div class="card-header card-header-success"> 
+                  <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                  <div class="nav-tabs-navigation  ">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                    <h4 class=" text-center">Categories</h4>
+                     
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body" style="color:rgb(235, 235, 235)">
+                  <div class="tab-content text-center">
+                    <div class="tab-pane active" >
+                        <li class="nav-link " {% if not category %} class="active"{% endif %}>
+                          <a href="{% url 'shop:product_list' %}">All</a>
+                        </li>
+                        <li class="nav-link "{% if category.slug == c.slug %} class="active"{% endif %}>
+                            {% for c in categories %}
+                          <a class="nav-link " href="{{ c.get_absolute_url }}"  >{{ c.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </div>
+                
+                  </div>
+                </div>
+              </div>
+        
+        </div>
+        <div class="col">
+            <div class="row">
+                {% for product in products %}  
+                <div class="col-12 col-md-6 col-lg-4">
+             
+                    <div class="card card-blog">
+                        <div class="card-header card-header-image">
+                          <a href="#pablo">
+                            <img class="img" src="{% if product.image %} {{ product.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}" >
+                          </a>
+                        </div>
+                        <div class="card-body text-center  " style="color:rgb(235, 235, 235)">
+                          <h6 class="card-category text-success">
+                            <i class="material-icons">trending_up</i> Trending
+                          </h6>
+                          <h4 class="card-title">
+                              <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                          </h4>
+                          <div class="description  ">
+                              <h4 class="info-title ">KSH {{ product.price }}</h4> 
+                          </div>
+                          <a href="{{ product.get_absolute_url }}" >
+                              <i class="material-icons">explore</i> Quick view
+                            </a>
+                            <a href="{{ product.get_absolute_url }}"><input type="submit" name="submit" value="Add to cart" class="btn  btn-primary  btn-round btn-block" />
+                              
+                            </a>
+                        </div>
+                 
+                           
+             
+              </div>
+                </div>
+           {% endfor %}
+                <!-- <div class="col-12">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+       
+          
+           
+      
+                  
+       <!--           {% if products%}
+      {% else %}
+        <h1><strong> BUMMER!! </strong>nothing found in selected category .</h1>
+        <h3> <a href="{% url 'shop:contact' %}">Chat</a>  with us so that we find you your prefered Item</h3>
+        <h4>We are dedicated to bring you the best curated <strong>curio merchandise around Africa</strong></h4>
+        <h5><a href="{% url 'shop:product_list' %}">continue shopping</a></h5>
+        <br>
+        <img src="../../static/images/logincurio.png" alt="" style="width:150px; height:40px ">
+      {% endif %}
+            -->
+                <!-- <div class="col-12">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    -->
+
+
+{% endblock %}
+
+
+

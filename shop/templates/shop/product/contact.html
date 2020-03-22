@@ -1,10 +1,9 @@
-{% extends 'shop/base.html' %}
+{% extends 'shop/base2.html' %}
 {% load static %}
 
 
 
 {% block content %}
-
 <!-- Start of Async Drift Code -->
 <script>
 	"use strict";
@@ -34,203 +33,119 @@
 	</script>
 	<!-- End of Async Drift Code -->
 
-<!-- //Modal2 -->
-<!-- /banner_bottom_agile_info -->
-<div class="page-head_agile_info_w3l">
-		<div class="container">
-			<h3>C<span>ontact Us </span></h3>
-			<!--/w3_short-->
-				 <div class="services-breadcrumb">
-						<div class="agile_inner_breadcrumb">
-
-						   <ul class="w3_short">
-								<li><a href="{% url 'shop:home' %}">Home</a><i>|</i></li>
-								<li>Contact</li>
-							</ul>
-						 </div>
-				</div>
-	   <!--//w3_short-->
-	</div>
-</div>
-   <!--/contact-->
-    <div class="banner_bottom_agile_info">
-	    <div class="container">
-		  <div class="contact-grid-agile-w3s">
-				<div class="col-md-4 contact-grid-agile-w3">
-						<div class="contact-grid-agile-w31">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							<h4>Address</h4>
-							<p>Greenfields <span>Nairobi , Kenya</span></p>
-						</div>
+	<body class="contact-page sidebar-collapse" >
+	
+		<div id="contactUsMap" class="big-map" ></div>
+		<div class="" style="margin-top: 200px;">
+		  <div class="contact-content">
+			<div class="container">
+			  <h2 class="title">Send us a message</h2>
+			  <div class="row">
+				<div class="col-md-6">
+				  <p class="description">You can contact us with anything related to our Products. We&apos;ll get in touch with you as soon as possible.
+					<br>
+					<br>
+				  </p>
+				  <form role="form" id="contact-form" method="post">
+					<div class="form-group">
+					  <label for="name" class="bmd-label-floating">Your name</label>
+					  <input type="text" class="form-control" id="name">
 					</div>
-					<div class="col-md-4 contact-grid-agile-w3">
-						<div class="contact-grid-agile-w32">
-							<i class="fa fa-phone" aria-hidden="true"></i>
-							<h4>Call Us</h4>
-							<p>+254 723615755<span>+254 726830125</span></p>
-						</div>
+					<div class="form-group">
+					  <label for="exampleInputEmails" class="bmd-label-floating">Email address</label>
+					  <input type="email" class="form-control" id="exampleInputEmails">
+					  <span class="bmd-help">We'll never share your email with anyone else.</span>
 					</div>
-					<div class="col-md-4 contact-grid-agile-w3">
-						<div class="contact-grid-agile-w33">
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<h4>Email</h4>
-							<p><a href="mailto:info@example.com">info@curioeffect.com</a><span><a href="mailto:info@example.com">sean@curioeffect.com</a></span></p>
-						</div>
+					<div class="form-group">
+					  <label for="phone" class="bmd-label-floating">Phone</label>
+					  <input type="text" class="form-control" id="phone">
 					</div>
-					<div class="clearfix"> </div>
+					<div class="form-group label-floating">
+					  <label class="form-control-label bmd-label-floating" for="message"> Your message</label>
+					  <textarea class="form-control" rows="6" id="message"></textarea>
+					</div>
+					<div class="submit text-center">
+					  <input type="submit" class="btn btn-primary btn-raised btn-round" value="Contact Us">
+					</div>
+				  </form>
 				</div>
-	   </div>
-	 </div>
-
-  
-				<div class="clearfix"> </div>
+				<div class="col-md-4 ml-auto">
+				  <div class="info info-horizontal">
+					<div class="icon icon-primary">
+					  <i class="material-icons">pin_drop</i>
+					</div>
+					<div class="description">
+					  <h4 class="info-title">Find us at the office</h4>
+					  <p> Bld Mihail Kogalniceanu, nr. 8,
+						<br> 7652 Bucharest,
+						<br> Romania
+					  </p>
+					</div>
+				  </div>
+				  <div class="info info-horizontal">
+					<div class="icon icon-primary">
+					  <i class="material-icons">phone</i>
+					</div>
+					<div class="description">
+					  <h4 class="info-title">Give us a ring</h4>
+					  <p> Michael Jordan
+						<br> +40 762 321 762
+						<br> Mon - Fri, 8:00-22:00
+					  </p>
+					</div>
+				  </div>
+				  <div class="info info-horizontal">
+					<div class="icon icon-primary">
+					  <i class="material-icons">business_center</i>
+					</div>
+					<div class="description">
+					  <h4 class="info-title">Legal Information</h4>
+					  <p> Creative Tim Ltd.
+						<br> VAT &#xB7; EN2341241
+						<br> IBAN &#xB7; EN8732ENGB2300099123
+						<br> Bank &#xB7; Great Britain Bank
+					  </p>
+					</div>
+				  </div>
+				</div>
+			  </div>
 			</div>
-       </div>
-	</div>
- <!--//contact-->
-<!--/grids-->
-<div class="coupons">
-	<div class="coupons-grids text-center">
-		<div class="w3layouts_mail_grid">
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-truck" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>FREE DELIVERY</h3>
-					<p>Free delivery of Items Within Nairobi</p>
-				</div>
-			</div>
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-headphones" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>24/7 SUPPORT</h3>
-					<p> seamless support, provided 24 hours a day and 7 days a week.NO Downtime </p>
-				</div>
-			</div>
-			<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>DELIVERS WITHIN 48HRS </h3>
-					<p>24-48 Hours Product, Delivery Time! Great everyday value for money </p>
-				</div>
-			</div>
-				<div class="col-md-3 w3layouts_mail_grid_left">
-				<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-					<i class="fa fa-gift" aria-hidden="true"></i>
-				</div>
-				<div class="w3layouts_mail_grid_left2">
-					<h3>FREE GIFT COUPONS</h3>
-					<p>Free give aways to customers with coupon/promo code <strong>COMING SOON</strong></p>
-				</div>
-			</div>
-			<div class="clearfix"> </div>
+		  </div>
 		</div>
-
-	</div>
-</div>
-<!--grids-->
-<!-- footer -->
-<div class="footer">
-	<div class="footer_agile_inner_info_w3l">
-		<div class="col-md-3 footer-left">
-			<h2><a href="index.html"><span>U</span>STAWI </a></h2>
-			<p>African curio | apparels | home decor | jewelry | etc
-			   -we are an online curio shop find eveything african</p>
-			<ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-					<li class="share" style="color:#2fdab8">CONNECT WITH US ON : </li><br>
-															<li><a href="https://web.facebook.com/Thecurioeffect/"  target=”_blank” class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div  class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="https://twitter.com/CurioEffect" target=”_blank” class="twitter">
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="https://www.instagram.com/curio_effect/?hl=en" target=”_blank” class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" target=”_blank” aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-			</ul>
-		</div>
-		<div class="col-md-9 footer-right">
-			<div class="sign-grds">
-				<div class="col-md-4 sign-gd">
-					<h4>Our <span>Information</span> </h4>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="mens.html">shop</a></li>
-						<li><a href="womens.html">Men's Wear</a></li>
-						<li><a href="about.html">Women's wear</a></li>
-						<li><a href="typography.html">Home Accesories</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-5 sign-gd-two">
-					<h4>Store <span>Information</span></h4>
-					<div class="w3-address">
-						<div class="w3-address-grid">
-							<div class="w3-address-left">
-								<i class="fa fa-phone" aria-hidden="true"></i>
-							</div>
-							<div class="w3-address-right">
-								<h6>Phone Number</h6>
-								<p>+254 726830125</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="w3-address-grid">
-							<div class="w3-address-left">
-								<i class="fa fa-envelope" aria-hidden="true"></i>
-							</div>
-							<div class="w3-address-right">
-								<h6>Email Address</h6>
-								<p>Email :<a href="mailto:example@email.com"> info@curioeffect.com</a></p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="w3-address-grid">
-							<div class="w3-address-left">
-								<i class="fa fa-map-marker" aria-hidden="true"></i>
-							</div>
-							<div class="w3-address-right">
-								<h6>Nairobi , KENYA</h6>
-								<p>Greenfields,Nairobi, KENYA.
-
-								</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-				</div>
-
-				<div class="clearfix"></div>
+		<footer class="footer">
+			<div class="container">
+			  <!-- <nav class="float-left">
+				<ul>
+				  <li>
+					<a href="https://www.creative-tim.com/">
+					  Creative Tim
+					</a>
+				  </li>
+				  <li>
+					<a href="https://creative-tim.com/presentation">
+					  About Us
+					</a>
+				  </li>
+				  <li>
+					<a href="http://blog.creative-tim.com/">
+					  Blog
+					</a>
+				  </li>
+				  <li>
+					<a href="https://www.creative-tim.com/license">
+					  Licenses
+					</a>
+				  </li>
+				</ul>
+			  </nav> -->
+			  <div class="copyright pull-center">
+				  Copyright &#xA9;
+				  <script>
+					  document.write(new Date().getFullYear())
+				  </script> Curio effect powered by    <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+				  </div>
 			</div>
-		</div>
-		<div class="clearfix"></div>
-			<div class="agile_newsletter_footer">
-					<div class="col-sm-6 newsleft">
-				<h3>SIGN UP FOR NEWSLETTER !</h3>
-			</div>
-			<div class="col-sm-6 newsright">
-				<form action="#" method="post">
-					<input type="email" placeholder="Enter your email..." name="email" required="">
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-
-		<div class="clearfix"></div>
-	</div>
-	<a href="{% url 'shop:contact' %}" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-	</div>
-</div>
-<!-- //footer -->
+		  </footer>
 
 
   {% endblock %}

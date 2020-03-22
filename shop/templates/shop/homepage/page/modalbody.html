@@ -1,0 +1,60 @@
+
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="instruction">
+    <div class="row">
+            <div class="col-md-6">
+                    <div class="">
+                            {% if category.image != None and category.image != '' %}
+                      <img src="{% if category.image %} {{ category.image.cdn_url }} {% else %} {% static 'img/default.png' %} {% endif %}"   alt="Thumbnail Image" class="rounded img-fluid">
+                    </div>	
+                    {% else %}
+                    Missing Image!
+                    {% endif %}
+                
+                </div> 
+      <div class="col-md-4 col-lg-6">
+                {% for subcategory in subcategories %}
+        <strong>{{ subcategory.name  }}</strong>
+        {% endfor %}
+    
+        
+        <ul class="links-vertical2 text-muted text ">
+                {% for minicategory in minicategories %}
+                <li>
+                  <a href="#pablo">
+                {{ minicategory.name }}
+                  </a>
+                </li>
+                {% endfor %}
+                <!-- <li>
+                  <a href="#pablo">
+                Platform beds 
+                  </a>
+                </li>
+                <li>
+                <a href="#pablo">
+                 Day beds
+                </a>
+              </li>
+                <li>
+                  <a href="#pablo">
+                Nightstands
+                  </a>
+                </li> -->
+              </ul>
+      </div>
+     
+    </div>
+  </div>
+
+
+  <p>Want something custom made? we would love to do that! Just contact us or send us a tweet @curioeffect. We&apos;re here for because of you</p>
+
+  {% endblock %}

@@ -42,7 +42,7 @@ label{
 }
 /*-- header --*/
 .header {
-    background: #000;
+    background: #212121!important;
 }
 .header ul li {
     display: inline-block;
@@ -318,7 +318,7 @@ i.fa.fa-shopping-bag.top_logo_agile_bag {
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background:#000;
+	background:#212121!important;
     padding: 0px 0;
 }
 .dropdown-menu.columns-3 {

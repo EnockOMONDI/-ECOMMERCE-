@@ -1,0 +1,459 @@
+{% load static %}
+
+
+<!----------nav -------------------------------------------->
+  <nav  class="navbar  bg-dark fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav"  style=" box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); ">
+    <div class="container" >
+   <div class="navbar-translate">
+		<a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:180px; height:100px "></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">    
+        
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <!-- <i class="material-icons">apps</i> Components --> Shop
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
+                <i class="material-icons">layers</i> Shop
+              </a>
+              <!-- <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
+                <i class="material-icons">line_style</i> All Components
+              </a>
+              <a href="{% url 'shop:product_list' %}"  class="dropdown-item">
+                <i class="material-icons">content_paste</i> Documentation
+              </a> -->
+            </div>
+          </li>
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="material-icons">view_day</i> About
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="{% url 'shop:about' %}"  class="dropdown-item">
+                <i class="material-icons">dns</i> Our story
+              </a>
+              <a href="{% url 'shop:contact' %}"  class="dropdown-item">
+                <i class="material-icons">call</i> Contact Us
+              </a>
+              <a href="{% url 'shop:about' %}" class="dropdown-item">
+                <i class="material-icons">list</i> FAQs
+              </a>
+             
+            </div>
+          </li>
+      
+          <li class="button-container nav-item iframe-extern">
+            <a href="#" target="_blank" class="btn  btn-primary  btn-round btn-block">
+              <i class="material-icons">shopping_cart</i> Cart
+            </a>
+          </li>
+
+          <li>
+         
+              <div class="dropdown ">
+                <button class="dropdown-toggle btn btn-primary btn-round btn-block "  type="button" id="multiDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  My Account
+                </button>
+                <div class="dropdown-menu dropdown-with-icons" aria-labelledby="multiDropdownMenu">
+                  <a class="dropdown-item"  data-toggle="modal" data-target="#loginModal"> <i class="material-icons">account_circle</i> Login</a>
+                  <a class="dropdown-item"  data-toggle="modal" data-target="#signupModal"> <i class="material-icons">person_add</i> Sign up</a>
+                  <a class="dropdown-item"  data-toggle="modal" data-target="#ordertrackmodal"> <i class="material-icons">motorcycle</i> Track Order</a>
+               
+                </div>
+          
+              </div>
+  
+        </li>
+          <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <i class="material-icons">store</i> sell with us
+              </a>
+              <div class="dropdown-menu dropdown-with-icons">
+                 
+                  <a class="dropdown-item"  data-toggle="modal" data-target="#noticeModal"> <i class="material-icons"></i> How it works</a>
+                <a href="{% url 'shop:vendorrequest' %}" class="dropdown-item">
+                  <i class="material-icons">location_on</i>Seller Center
+                </a>
+                <a href="{% url 'shop:Vendorfaqs' %}"class="dropdown-item">
+                  <i class="material-icons">question_answer</i> FAQs
+                </a>
+               
+              </div>
+            </li>
+
+
+   
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--------- end of nav -------------------------------->
+
+
+
+
+
+              <!-- Login Modal -->
+              <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-login" role="document">
+                    <div class="modal-content">
+                      <div class="card card-signup card-plain">
+                        <div class="modal-header">
+                          <div class="card-header card-header-primary text-center">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+                            <a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:170px; height:100px "></a>
+
+                            <div class="social-line">
+                              <a href="#pablo" class="btn btn-just-icon btn-link">
+                                <i class="fa fa-facebook-square"></i>
+                              </a>
+                              <a href="#pablo" class="btn btn-just-icon btn-link">
+                                <i class="fa fa-twitter"></i>
+                              </a>
+                              <a href="#pablo" class="btn btn-just-icon btn-link">
+                                <i class="fa fa-google-plus"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <form class="form" method="" action="#">
+                            <p class="description text-center">Or Be Classical</p>
+                            <div class="card-body">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                      <i class="material-icons">face</i>
+                                    </span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="First Name...">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                      <i class="material-icons">mail</i>
+                                    </span>
+                                  </div>
+                                  <input type="text" class="form-control" placeholder="Email...">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                      <i class="material-icons">lock_outline</i>
+                                    </span>
+                                  </div>
+                                  <input type="password" placeholder="Password..." class="form-control" />
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <a href="#pablo" class="btn btn-primary btn-round">Login</a>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <a   href="#pablo" data-toggle="modal" data-target="#signupModal" class="btn btn-primary btn-round" >or  SignUp here.</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  End of Login Modal -->
+
+
+
+
+
+
+                  <!-- Register Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-signup" role="document">
+        <div class="modal-content">
+          <div class="card card-signup card-plain">
+            <div class="modal-header">
+            
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="material-icons">clear</i>
+              </button>
+            </div>
+            <div class="modal-body">
+             
+             
+                <div class="col-md-12 mr-auto">
+                    <h3 class="modal-title card-title">Register</h3>
+                  <div class="social text-center">
+                    <button class="btn btn-just-icon btn-round btn-twitter">
+                      <i class="fa fa-twitter"></i>
+                    </button>
+                    <button class="btn btn-just-icon btn-round btn-dribbble">
+                      <i class="fa fa-dribbble"></i>
+                    </button>
+                    <button class="btn btn-just-icon btn-round btn-facebook">
+                      <i class="fa fa-facebook"> </i>
+                    </button>
+                    <h4> or be classical </h4>
+                  </div>
+                  <form class="form" method="" action="#">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">face</i>
+                            </span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="First Name...">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">mail</i>
+                            </span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Email...">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">lock_outline</i>
+                            </span>
+                          </div>
+                          <input type="password" placeholder="Password..." class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" checked>
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                          I agree to the
+                          <a href="#something">terms and conditions</a>.
+                        </label>
+                      </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                      <a href="#pablo" class="btn btn-primary btn-round">Get Started</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+                <div class="modal-footer justify-content-center">
+                <a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:180px; height:100px "></a>
+              </div>
+            
+           
+       
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--  End Modal -->
+
+
+      <!-- notice modal -->
+  <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-notice" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title card-title ">Your Success Story Starts With Us.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="material-icons">clear</i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="instruction">
+              <div class="row">
+                <div class="col-md-8">
+                  <strong>1. Register</strong>
+                  <p>The first step is to create an account at
+                    <a href="{% url 'shop:vendorrequest' %}" >Curio effect Seller Center</a>. You can choose a social network or go for the classic version, whatever works best for you.</p>
+                </div>
+                <div class="col-md-4">
+                  <div class="picture">
+                    <img src="assets/img/dg1.jpg" alt="Thumbnail Image" class="rounded img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="instruction">
+              <div class="row">
+                <div class="col-md-8">
+                  <strong>2. Apply</strong>
+                  <p>Awsome!After registering at  <a href="{% url 'shop:vendorrequest' %}" >Curio Seller Center</a>  just fill the simple vendor request form and we will contact you ASAP.
+                 </p>
+                </div>
+                <div class="col-md-4">
+                  <div class="picture">
+                    <img src="assets/img/dg2.jpg" alt="Thumbnail Image" class="rounded img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="instruction">
+                <div class="row">
+                  <div class="col-md-8">
+                    <strong>3. Got stuck?</strong>
+                    <p>Check out some frequently asked questions here <a href="{% url 'shop:Vendorfaqs' %}" >Vendor FAQs</a>
+                   </p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="picture">
+                      <img src="assets/img/dg2.jpg" alt="Thumbnail Image" class="rounded img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <p>If you have more questions, don&apos;t hesitate to contact us or send us a tweet @curioeffect. We&apos;re here to help you set up and start selling!</p>
+          </div>
+  
+          <div class="modal-footer justify-content-center">
+              <a href="{% url 'shop:vendorrequest' %}" class="btn btn-primary btn-round">Sounds good! Join Us</a>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+    <!-- end notice modal -->
+
+
+    <!--ordertracking modal  -->
+
+
+    <div class="modal fade" id="ordertrackmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-signup" role="document">
+          <div class="modal-content">
+            <div class="card card-signup card-plain">
+              <div class="modal-header">
+              
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <i class="material-icons">clear</i>
+                </button>
+              </div>
+              <div class="modal-body">
+               
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto text-center">
+                          <h2 class="title">We are working on your order</h2>
+                          <h6 class="description">Kindly be checking on this Modal frequently as it automaticaly updates.</h6>
+                          <div class="section-space"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5 ml-auto">
+                          <div class="card card-background" style="background-image:url('assets/img/examples/card-project2.jpg')">
+                            <a href="#pablo"></a>
+                            <div class="card-body">
+                                <span class="badge badge-">Client: {x}</span>
+                             
+                              <p class="card-description">
+                                Bought {x items} at {x time}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-5 mr-auto">
+                            <div class="info info-horizontal">
+                                <div class="icon icon-info">
+                                  <i class="material-icons text-success">check</i>
+                                </div>
+                                <div class="description">
+                                  <h4 class="info-title">Processed</h4>
+                                
+                                </div>
+                              </div>
+                              <div class="info info-horizontal">
+                                  <div class="icon icon-primary">
+                                      <i class="material-icons text-success">check</i>
+                                  </div>
+                                  <div class="description">
+                                    <h4 class="info-title">Packed</h4>
+                                    
+                                  </div>
+                                </div>
+
+
+                                <div class="info info-horizontal">
+                                    <div class="icon icon-danger">
+                                        <i class="material-icons text-success">check</i>
+                                    </div>
+                                    <div class="description">
+                                        <h4 class="info-title">shipped</h4>                            
+                                    </div>
+                                 
+                                  </div>
+
+                                  <div class="info info-horizontal">
+                                      <div class="icon ">
+                                          <i class="material-icons ">motorcycle</i>
+                                      </div>
+                                      <div class="description">
+                                          <h4 class="info-title">Rider <i class="material-icons text-success">check</i></h4>                                                                           
+                                      </div>               
+                                    </div>
+                         
+                         
+                        </div>
+                      </div>
+                      <hr>
+                   
+                    </div>
+               
+                </div>
+                
+              
+                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                    <div class="info info-horizontal">
+                    <div class="fileinput-new thumbnail img-circle img-raised">
+                      <img src="../../static/img/placeholder.jpg"  alt="..."style="width:50px; height:50px ">
+                    </div>
+               
+                     
+                      
+                        <div class="description">
+                            <h4 class="info-title">Delivered</h4> <i class="material-icons text-succes">check</i></h4>                            
+                        </div>
+                     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+

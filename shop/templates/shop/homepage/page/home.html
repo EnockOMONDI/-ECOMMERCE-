@@ -1,0 +1,1582 @@
+
+{% extends 'shop/homepage/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+	
+<div class="section2" id="carousel">
+		<div class="row"  style=" padding-left:9px; padding-right:9px;">
+			<div class="col-md-12 mr-auto ml-auto">
+				<!-- Carousel Card -->
+				<div class="card2 card-raised card-carousel">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="d-block w-100 "  href="#carouselExampleIndicators" src="../../../static/images/bg0.png" alt="First slide">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h4>
+										<i class="material-icons">location_on</i> Yellowstone National Park, United States
+									</h4> -->
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100"  href="#carouselExampleIndicators" src="../../../static/images/bgi.png"  alt="Second slide">
+								<div class="carousel-caption d-none d-md-block ">
+									<!-- <h4 >
+										<i class="material-icons  ">location_on</i> Somewhere Beyond, United States
+									</h4> -->
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100"  href="#carouselExampleIndicators" src="../../../static/images/p2.png" alt="Third slide">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h4>
+										<i class="material-icons">location_on</i> Yellowstone National Park, United States
+									</h4> -->
+								</div>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<i class="material-icons">keyboard_arrow_left</i>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<i class="material-icons">keyboard_arrow_right</i>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<!-- End Carousel Card -->
+			</div>
+		</div>
+	</div>
+
+	
+		
+
+<!-- ------------------------------------------------------ -->
+
+	
+	
+	<!-- funiture mod not being used-->
+	<!-- <div class="modal fade" id="funitureModal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-notice" role="document">
+	<div class="modal-content">
+	<div class="modal-header">
+	<h5 class="modal-title card-title ">Home of the best Funiture.</h5>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<i class="material-icons">clear</i>
+	</button>
+	</div>
+	<div class="modal-body">
+	<div class="instruction">
+	<div class="row">
+	<div class="col-md-6">
+		<div class="">
+		  <img src="../../../static/images/tvstand.jpg" alt="Thumbnail Image" class="rounded img-fluid">
+		</div>	
+	
+	
+	</div> 
+	<div class="col-md-4 col-lg-6">
+	<strong>Bedroom Funiture</strong>
+	<ul class="links-vertical2 text-muted text ">
+	<li>
+	  <a href="#pablo">
+	Pallets beds
+	  </a>
+	</li>
+	<li>
+	  <a href="#pablo">
+	Platform beds 
+	  </a>
+	</li>
+	<li>
+	<a href="#pablo">
+	 Day beds
+	</a>
+	</li>
+	<li>
+	  <a href="#pablo">
+	Nightstands
+	  </a>
+	</li>
+	</ul>
+	</div>
+	
+	</div>
+	</div>
+	<div class="instruction">
+	<div class="row">
+	<div class="col-md-4">
+		<strong>Bedroom Funiture</strong>
+		<ul class="links-vertical2 text-muted text ">
+				<li>
+				  <a href="#pablo">
+				Pallets beds
+				  </a>
+				</li>
+				<li>
+				  <a href="#pablo">
+				Platform beds 
+				  </a>
+				</li>
+				<li>
+				<a href="#pablo">
+				 Day beds
+				</a>
+			  </li>
+				<li>
+				  <a href="#pablo">
+				Nightstands
+				  </a>
+				</li>
+			  </ul>
+	  </div>
+	 
+	</div>
+	</div>
+	<p>Want something custom made? we would love to do that! Just contact us or send us a tweet @curioeffect. We&apos;re here for because of you</p>
+	</div>
+	
+	<div class="modal-footer justify-content-center">
+	<a href="{% url 'shop:vendorrequest' %}" class="btn btn-primary btn-round">Shop in all funiture</a>
+	</div>
+	
+	</div>
+	</div>
+	</div> -->
+
+	<!-- ----- end of funiture mod------------------------- -->
+	
+
+
+	{% include 'shop/homepage/page/nev2.html' %}
+	
+	<!------------------ nav------------------------------------------>
+			<!-- <div class="row">
+					<div class="col-md-12 ml-auto mr-auto text-center">
+						<ul class="nav nav-pills nav-pills-primary">
+							
+							{% for c in categories %}
+							<li class="nav-item">
+								<div class="dropdown ">  
+								<a class="nav-link dropdown-toggle " id="multiDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">{{ c.name}}</a>
+								{% endfor %}
+								
+							  <div class="dropdown-menu" aria-labelledby="multiDropdownMenu">
+					
+					  	{% for subcategory in subcategories %} 
+							<a class="dropdown-item dropdown-toggle" href="#pablo">{{ subcategory.name  }}</a>
+							 {% endfor %}
+						
+							<div class="dropdown-menu">
+						 {% for minicategory in minicategories %} 
+							<a class="dropdown-item dropdown-toggle" href="#pablo">{{ minicategory.name  }}</a>
+							{% endfor %}
+						
+					   </div>
+								  </div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div> -->
+
+	<!--------------------end of nav---------------------------------------->
+
+<!------------------------------------------------------------>
+
+
+
+ <!-- 	            end nav tabs -->
+ <!-- <div class="section section-white">
+	<div class="container"> -->
+		<!--                 nav pills -->
+		<!-- <div id="navigation-pills">
+			<div class="title">
+				<h3>Navigation Pills</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-8">
+					<h3>
+						<small> Horizontal tabs</small>
+					</h3>
+					<ul class="nav nav-pills nav-pills-rose">
+						<li class="nav-item">
+							<a class="nav-link active" href="#pill1" data-toggle="tab">Profile</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#pill2" data-toggle="tab">Settings</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#pill3" data-toggle="tab">Options</a>
+						</li>
+					</ul>
+					<div class="tab-content tab-space">
+						<div class="tab-pane active" id="pill1">
+							Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+							<br>
+							<br> Dramatically visualize customer directed convergence without revolutionary ROI.
+						</div>
+						<div class="tab-pane" id="pill2">
+							Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+							<br>
+							<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+						</div>
+						<div class="tab-pane" id="pill3">
+							Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+							<br>
+							<br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<h3>
+						<small> Vertical tabs</small>
+					</h3>
+					<div class="row">
+						<div class="col-md-4">
+							<ul class="nav nav-pills nav-pills-rose flex-column">
+								<li class="nav-item">
+									<a class="nav-link active" href="#tab1" data-toggle="tab">Profile</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#tab2" data-toggle="tab">Settings</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#tab3" data-toggle="tab">Options</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-8">
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab1">
+									Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+									<br>
+									<br> Dramatically visualize customer directed convergence without revolutionary ROI.
+								</div>
+								<div class="tab-pane" id="tab2">
+									Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+									<br>
+									<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+								</div>
+								<div class="tab-pane" id="tab3">
+									Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+									<br>
+									<br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				<h3>
+					<small>With Icons</small>
+				</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-8">
+					<ul class="nav nav-pills nav-pills-icons" role="tablist"> -->
+						<!--
+														color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+												-->
+						<!-- <li class="nav-item">
+							<a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
+								<i class="material-icons">dashboard</i> Dashboard
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
+								<i class="material-icons">schedule</i> Schedule
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
+								<i class="material-icons">list</i> Tasks
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content tab-space">
+						<div class="tab-pane active" id="dashboard-1">
+							Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+							<br>
+							<br> Dramatically visualize customer directed convergence without revolutionary ROI.
+						</div>
+						<div class="tab-pane" id="schedule-1">
+							Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+							<br>
+							<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+						</div>
+						<div class="tab-pane" id="tasks-1">
+							Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.
+							<br>
+							<br>Dynamically innovate resource-leveling customer service for state of the art customer service.
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12">
+					<div class="row">
+						<div class="col-md-3">
+							<ul class="nav nav-pills nav-pills-icons flex-column" role="tablist"> -->
+								<!--
+																		color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+																-->
+								<!-- <li class="nav-item">
+									<a class="nav-link active" href="#dashboard-2" role="tab" data-toggle="tab">
+										<i class="material-icons">dashboard</i> Dashboard
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#schedule-2" role="tab" data-toggle="tab">
+										<i class="material-icons">schedule</i> Schedule
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-8">
+							<div class="tab-content">
+								<div class="tab-pane active" id="dashboard-2">
+									Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.
+									<br>
+									<br> Dramatically visualize customer directed convergence without revolutionary ROI.
+								</div>
+								<div class="tab-pane" id="schedule-2">
+									Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.
+									<br>
+									<br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!--                 end nav pills -->
+	<!-- </div>
+</div> -->
+<!-- -------------------------------------------------------------------- -->
+<div class="row " style="padding-left:15px; padding-right:15px;">
+	<div class="col-md-3 ">
+		<div class="rotating-card-container">
+			<div class="card card-rotate card-background">
+				<div class="front front-background" style="background-image: url('static/images/PaintingDecorationfor.jpg')">
+					<div class="card-body">
+						
+						<a href="#pablo">
+							<h3 class="card-title">Home & Decor</h3>
+						</a>
+						<p class="card-description">
+					undation in truth And I love  loves Kanye I love Rick Owens’ bed design but the back is...
+						</p>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+				<div class="back back-background" style="background-image: url('static/images/PaintingDecorationfor.jpg');">
+					<div class="card-body">
+						<h5 class="card-title">
+							Shop in Home & Decor
+						</h5>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-md-3 ">
+		<div class="rotating-card-container">
+			<div class="card card-rotate card-background">
+				<div class="front front-background" style="background-image:  url('static/images/home.jpg');">
+					<div class="card-body">
+						
+						<a href="#pablo">
+							<h3 class="card-title">Clothing & Shoes</h3>
+						</a>
+						<p class="card-description">
+					undation in truth And I love  loves Kanye I love Rick Owens’ bed design but the back is...
+						</p>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+				<div class="back back-background" style="background-image:  url('static/images/nairobae.jpg');">
+					<div class="card-body">
+						<h5 class="card-title">
+							Shop in Clothing & Shoes
+						</h5>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-md-3 ">
+		<div class="rotating-card-container">
+			<div class="card card-rotate card-background">
+				<div class="front front-background" style="background-image:  url('static/images/bodywe.jpg');">
+					<div class="card-body">
+						
+						<a href="#pablo">
+							<h3 class="card-title">Jewelry & Accessories</h3>
+						</a>
+						<p class="card-description">
+					undation in truth And I love  loves Kanye I love Rick Owens’ bed design but the back is...
+						</p>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+				<div class="back back-background" style="background-image:  url('static/images/caps2.jpg');">
+					<div class="card-body">
+						<h5 class="card-title">
+							Shop in Jewelry & Accessories
+						</h5>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="col-md-3 ">
+		<div class="rotating-card-container">
+			<div class="card card-rotate card-background">
+				<div class="front front-background" style="background-image:  url('static/images/home.jpg');">
+					<div class="card-body">
+						
+						<a href="#pablo">
+							<h3 class="card-title">Art & collectibles</h3>
+						</a>
+						<p class="card-description">
+					undation in truth And I love  loves Kanye I love Rick Owens’ bed design but the back is...
+						</p>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+				<div class="back back-background" style="background-image:  url('static/images/nairobae.jpg');">
+					<div class="card-body">
+						<h5 class="card-title">
+							Shop in Art & collectibles
+						</h5>
+						<div class="footer text-center">
+							<a href="#pablo" class="btn btn-primary btn-just-icon btn-fill btn-round">
+								<i class="material-icons">shop</i>
+							</a>
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- --------------------------------------------------------------------- -->
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!---------------------------------------------------------------------------------------------->
+ <!-- <div class="social-line social-line-big-icons social-line-white">
+		<div class="container">
+				<h2 class="title">Popular Collections</h2>
+			<div class="row" style=" padding-left:5px; padding-right:5px;">
+				
+				
+
+			</div>
+		</div>
+	</div>  -->
+<!-- --------------------------------------------------------------------------------- -->
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo" class="carousel slide" data-ride="carousel"> -->
+
+  <!-- Indicators -->
+  <!-- <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul> -->
+  
+  <!-- The slideshow -->
+  <!-- <div class="container carousel-inner no-padding">
+    <div class="carousel-item active">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>  
+    </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>  
+    </div>
+  </div>
+   -->
+  <!-- Left and right controls -->
+  <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo" class="carousel slide" data-ride="carousel"> -->
+
+  <!-- Indicators -->
+  <!-- <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul> -->
+  
+  <!-- The slideshow -->
+  <!-- <div class="container carousel-inner no-padding">
+    <div class="carousel-item active">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>  
+    </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>  
+    </div>
+  </div> -->
+  
+  <!-- Left and right controls -->
+  <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div> -->
+
+
+<!-- Popular 2-->
+<div class="social-line social-line-big-icons social-line-white">
+		<div class="container">
+				<h2 class="title">Popular Collections</h2>
+			<div class="row" style=" padding-left:5px; padding-right:5px;">
+			<div class="col-md-2 col-4">
+							<a>
+							<img src="../../static/img/img6.jpeg " alt=""class="img img-raised rounded" style="width:100px; height:100px ">
+							
+							<div class="description ">
+										<h5 class="info-title">Red boho pants elephant print</h5> 
+								</div>
+						</a>
+					</div>
+					<div class="col-md-2 col-4">
+							<a>
+							<img src="../../static/img/img7.jpeg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+							
+							<div class="description ">
+										<h5 class="info-title">Grey & red bead necklace</h5> 
+								</div>
+						</a>
+					</div>
+				<div class="col-md-2 col-4">
+						<a>
+						<img src="../../static/img/img4.jpeg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+						
+						<div class="description ">
+									<h5 class="info-title">Harem high waist elephant pants</h5> 
+							</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-4">
+						<a>
+						<img src="../../static/img/led3.jpg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+						
+						<div class="description ">
+									<h5 class="info-title">LED Office Light Decor</h5> 
+							</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-4">
+						<a>
+						<img src="../../static/img/2.png " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+						
+						<div class="description ">
+									<h5 class="info-title">Home Pillow decor</h5> 
+							</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-4">
+						<a>
+						<img src="../../static/img/clock.jpg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+						
+						<div class="description ">
+									<h5 class="info-title">Unique wall clock</h5> 
+							</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- end of popular 2 -->
+
+
+	<footer class="footer footer-white footer-big">
+		<div class="container">
+		  <div class="content">
+			<div class="row"  >
+				<!-- style=" padding-left:4px; padding-right:4px;" -->
+				<div class="col-md-4">
+					<h4>Popular in Home & Decor</h4>
+					<div class="gallery-feed">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">	
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					</div>
+				  </div>
+
+		
+			 
+			  <div class="col-md-4">
+				<h4>Popular in clothing & Shoes</h4>
+				<div class="gallery-feed">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">	
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+						<img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+					  <img src="../../static/img/led3.jpg " class="img img-raised rounded" alt="">
+				</div>
+			  </div>
+		
+				<div class="col-md-4">
+				
+
+
+						<div class="card-body ">
+								<h6 class="card-category text-primary">
+									<i class="material-icons">shop</i> Shop in Home & Decor
+								</h6>
+								<h4 class="card-title">
+									<a href="#pablo">To Grow Your Business Start Focusing on Your Employees</a>
+								</h4>
+							</div>
+              <div class="row">
+									<div class="col-md-4 ml-auto mr-auto text-center">
+										<a href="{% url 'shop:product_list' %}"  class="btn btn-primary btn-round btn-raised">
+										Shop
+										</a>
+									</div>
+								</div>
+								 <!-- <li class="button-container nav-item iframe-extern">
+            <a href="{% url 'shop:product_list' %}"  class="btn  btn-primary   btn-round btn-block">
+               Shop
+            </a>
+          </li> -->
+
+							
+ 
+				</div>		
+			</div>
+		  </div>
+
+		
+		</div>
+	
+		</footer>	
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+				<!--     *********    PROJECTS 1     *********      -->
+	
+				<div class="projects-1" id="projects-1" style="background-color:#fff; margin: 15px;" >
+						<!-- style="margin-top:20px;" -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 ml-auto mr-auto text-center">
+								<h2 class="title">In-house Designs & Products</h2>
+			
+							</div>
+						</div>
+								<div class="col-md-12  ml-auto mr-auto ">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card card-raised card-background" style="background-image: url('static/images/inhousebed.jpg')">
+									<div class="card-body">
+										<!-- <h6 class="card-category text-info">Productivity</h6> -->
+										<a href="#pablo">
+											<h3 class="card-title">Modern Platform Bed</h3>
+										</a>
+										<p class="card-description">
+											Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+										</p>
+										<a href="#pablo" class="btn btn-primary btn-round">
+											<i class="material-icons">content_copy</i> view
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-raised card-background" style="background-image: url('static/images/diningtable.jpg')">
+									<div class="card-body">
+										<h6 class="card-category text-info"></h6>
+										<h3 class="card-title">Curio effect Dining Table</h3>
+										<p class="card-description">
+											Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+										</p>
+										<a href="#pablo" class="btn btn-primary btn-round">
+											<i class="material-icons">build</i> View 
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-raised card-background" style="background-image: url('static/images/tvstand.jpg')">
+									<div class="card-body">
+										<h6 class="card-category text-info"></h6>
+										<h3 class="card-title">Curio effect Tv Stand </h3>
+										<p class="card-description">
+											Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+										</p>
+										<a href="#pablo" class="btn btn-warning btn-round">
+											<i class="material-icons">subject</i> view
+										</a>
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+							<div class="col-md-6">
+												<div class="card-body text-center">
+										<h6 class="card-category text-primary">
+											<i class="material-icons">shop</i> Shop in Our In-house Designs
+										</h6>
+										<h4 class="card-title">
+											<a href="#pablo">To Grow Your Business Start Focusing on Your Employees</a>
+										</h4>
+									</div>
+									<div class="row">
+											<div class="col-md-4 ml-auto mr-auto text-center">
+												<a href="{% url 'shop:product_list' %}"  class="btn btn-primary btn-round btn-raised">
+												Shop
+												</a>
+											</div>
+										</div>
+						
+		
+									
+		 
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+
+
+
+			<div class="social-line social-line-big-icons social-line-white">
+				<div class="container">
+						<h2 class="title text-right">Popular In In-house designs</h2>
+					<div class="row" style=" padding-left:5px; padding-right:5px;">
+					<div class="col-md-2 col-4">
+									<a>
+									<img src="../../static/img/img6.jpeg " alt=""class="img img-raised rounded" style="width:100px; height:100px ">
+									
+									<div class="description ">
+												<h5 class="info-title">Red boho pants elephant print</h5> 
+										</div>
+								</a>
+							</div>
+							<div class="col-md-2 col-4">
+									<a>
+									<img src="../../static/img/img7.jpeg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+									
+									<div class="description ">
+												<h5 class="info-title">Grey & red bead necklace</h5> 
+										</div>
+								</a>
+							</div>
+						<div class="col-md-2 col-4">
+								<a>
+								<img src="../../static/img/img4.jpeg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+								
+								<div class="description ">
+											<h5 class="info-title">Harem high waist elephant pants</h5> 
+									</div>
+							</a>
+						</div>
+						<div class="col-md-2 col-4">
+								<a>
+								<img src="../../static/img/led3.jpg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+								
+								<div class="description ">
+											<h5 class="info-title">LED Office Light Decor</h5> 
+									</div>
+							</a>
+						</div>
+						<div class="col-md-2 col-4">
+								<a>
+								<img src="../../static/img/2.png " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+								
+								<div class="description ">
+											<h5 class="info-title">Home Pillow decor</h5> 
+									</div>
+							</a>
+						</div>
+						<div class="col-md-2 col-4">
+								<a>
+								<img src="../../static/img/clock.jpg " alt="" class="img img-raised rounded" style="width:100px; height:100px ">
+								
+								<div class="description ">
+											<h5 class="info-title">Unique wall clock</h5> 
+									</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+			<footer class="footer footer-white footer-big " style="margin: 20px;">
+					<div class="container">
+						<div class="content">
+								<div class="col-md-12  ml-auto mr-auto ">
+						<div class="row"  >
+							<!-- style=" padding-left:4px; padding-right:4px;" -->
+
+
+
+							<div class="col-md-3 col-10 ml-auto mr-auto text-center">
+							<div class="card bg-primary">
+								
+                
+									<div class="card-footer">
+											<div class="author">
+										
+													
+													<img src="../../static/images/mpesa.png" alt="..." class="avatar img-raised" style="height:60px; width: 70px;">
+												
+										
+											</div>
+										 <br>
+											<div class="author">
+													<img src="../../static/images/paypal.jpg" alt="..." class="avatar img-raised" style="height:60px; width: 70px;">
+
+											</div>
+		
+										
+										</div>
+						
+								</div>
+								<div class="card bg-primary">
+								
+                
+										<div class="card-footer">
+												<div class="author">
+											
+														
+														<i class="material-icons text-center">shop</i>  Pay on delivery												
+											
+												</div>
+											
+											
+											
+											
+											</div>
+							
+									</div>
+							</div>
+						
+
+
+						
+
+
+
+
+
+
+
+
+							
+
+							<div class="col-md-3">
+					
+								<div class="info info-horizontal ">
+										<div class="icon icon-primary ">
+											<i class="material-icons">motorcycle</i>
+										</div>
+										<div class="description " >
+											<h4 class="info-title">Free delivery</h4>
+											<p>Free delivery within Nairobi, Fast delivery within 48 hours.</p>
+									
+										</div>
+									</div>
+								</div>
+			
+					
+						 
+							<div class="col-md-3">
+									<div class="info info-horizontal">
+											<div class="icon icon-primary ">
+												<i class="material-icons">watch</i>
+											</div>
+											<div class="description">
+												<h4 class="info-title">24/7 support </h4>
+												<p>Seamless support, provided 24 hours a day and 7 days a week..</p>
+											
+											</div>
+										</div>
+							</div>
+					
+							<div class="col-md-3">
+							
+			
+									<div class="info info-horizontal">
+											<div class="icon icon-primary">
+												<i class="material-icons">check</i>
+											</div>
+											<div class="description">
+												<h4 class="info-title">GIFT COUPONS</h4>
+												<p>Free give aways to customers with coupon/promo code <strong>comming soon</strong>.</p>
+											
+											</div>
+										</div>
+											 <!-- <li class="button-container nav-item iframe-extern">
+									<a href="{% url 'shop:product_list' %}"  class="btn  btn-primary   btn-round btn-block">
+										 Shop
+									</a>
+								</li> -->
+			
+								
+							</div>	
+							</div>		
+						</div>
+						</div>
+			
+					
+					</div>
+				
+					</footer>
+		
+					
+		
+							
+
+		
+				
+	
+
+
+
+
+
+							 
+
+							
+
+
+
+
+
+        <!--     *********    BIG WHITE FOOTER     *********      -->
+		<footer class="footer footer-white footer-big" style="padding:20px;">
+            <div class="container">
+              <div class="content">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <ul class="links-vertical ">
+                      <li>
+                        <a href="#pablo">
+                        Who we are
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#pablo">
+					   Our team 
+                        </a>
+					  </li>
+					  <li>
+					  <a href="#pablo">
+						Careers
+					  </a>
+					</li>
+                      <li>
+                        <a href="#pablo">
+                          Contact Us
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Market</h5>
+                    <ul class="links-vertical">
+                      <li>
+                        <a href="#pablo">
+                          FAQs
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#pablo">
+                        Sell on Currio effect
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#pablo">
+                         Partener with us
+                        </a>
+                      </li>
+                   
+                      <li>
+                        <a href="#pablo">
+                          Affiliates Program
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  
+										<div class="col-md-4">
+											<h5>Instagram Feed</h5>
+											<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/4d09560cc517585b80ee16c2692b26d5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+											</div>
+				 
+				 
+
+                </div>
+              </div>
+              <hr>
+			  <div class="copyright pull-center">
+				Copyright &#xA9;
+				<script>
+				  document.write(new Date().getFullYear())
+				</script> Curio effect powered by    <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+			  </div>
+            </div>
+          </footer>
+          <!--     *********   END BIG WHITE FOOTER     *********      -->
+
+
+
+
+
+
+		<!-- <div class="section section-blog " style="background-color:rgb(255, 255, 255)">
+			<div class="container">
+			  <h2 class="section-title">Latest Articles</h2>
+			  <div class="row">
+				<div class="col-md-4">
+				  <div class="card card-blog">
+					<div class="card-header card-header-image">
+					  <a href="#pablo">
+						<img src="static/images/bbg2.jpg" alt="">
+					  </a>
+					</div>
+					<div class="card-body">
+					  <h6 class="card-category text-rose">Trends</h6>
+					  <h4 class="card-title">
+						<a href="#pablo">Learn how to wear your scarf with a floral print shirt</a>
+					  </h4>
+					  <p class="card-description">
+						Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+					  </p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card card-blog">
+					<div class="card-header card-header-image">
+					  <a href="#pablo">
+						<img src="static/images/bbg2.jpg" alt="">
+					  </a>
+					</div>
+					<div class="card-body">
+					  <h6 class="card-category text-rose">Fashion week</h6>
+					  <h4 class="card-title">
+						<a href="#pablo">Katy Perry was wearing a Dolce &amp; Gabanna arc dress</a>
+					  </h4>
+					  <p class="card-description">
+						Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+					  </p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4">
+				  <div class="card card-blog">
+					<div class="card-header card-header-image">
+					  <a href="#pablo">
+						<img src="static/images/bbg2.jpg" alt="">
+					  </a>
+					</div>
+					<div class="card-body">
+					  <h6 class="card-category text-rose">Fashion week</h6>
+					  <h4 class="card-title">
+						<a href="#pablo">Check the latest fashion events and which are the trends</a>
+					  </h4>
+					  <p class="card-description">
+						Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+					  </p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div> -->
+        <!--  ///END OF SECOND SECTION ------------------------------>
+
+        <!-- OUR LAUNCH OFFER ----------------------------------->
+<!-- <div class="schedule-bottom"style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
+  <div class="col-md-6 agileinfo_schedule_bottom_left" >
+    <img src="static/images/nairobae.jpg" alt=" " class="img-responsive" />
+  </div>
+  <div class="col-md-6 agileits_schedule_bottom_right" >
+    <div class="w3ls_schedule_bottom_right_grid" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
+      <h3>OPENING OFFER Save up to <span>50%</span> this week</h3>
+      <p> We are super happy to launch our shop. We promise bring you the best of kenyan curio & kenyan
+      fashion apparels To start of all our Items are on Offer!!! we are giving you up to 50% discount
+    .SHOP AWAY!!!!</p>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+  <div class="clearfix"> </div>
+</div> -->
+<!-- //END OF OUR LAUNCH OFFER --------------------------------------->
+
+<!-- <div class="clearfix"></div> -->
+<!-- WHATS TRENDING SECTION  ------------------------------------>
+	<!-- <div class="banner-bootom-w3-agileits">
+	<div class="container">
+		<h3 class="wthree_text_info">What's <span>Trending</span></h3>
+
+		<div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
+			<a  href= "{% url 'shop:product_list' %}">
+			   <div class="bb-left-agileits-w3layouts-inner grid">
+					<figure class="effect-roxy">
+							<img src="static/images/bb1.jpg" alt=" " class="img-responsive" />
+							<figcaption>
+								<h3><span>S</span>ale </h3>
+								<p>Upto 50%</p>
+							</figcaption>
+						</figure>
+			    </div>
+			</a>
+		</div>
+		<div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
+		      <a href="{% url 'shop:product_list' %}">
+		       <div class="bb-middle-agileits-w3layouts grid">
+			           <figure class="effect-roxy">
+							<img src="static/images/bottom3.jpg" alt=" " class="img-responsive" />
+							<figcaption>
+								<h3><span>S</span>ale </h3>
+								<p>Upto 50%</p>
+							</figcaption>
+						</figure>
+		        </div>
+				</a>
+				<a href="{% url 'shop:product_list' %}">
+		      <div class="bb-middle-agileits-w3layouts forth grid">
+						<figure class="effect-roxy">
+							<img src="static/images/bottom4.jpg" alt=" " class="img-responsive">
+							<figcaption>
+								<h3><span>S</span>ale </h3>
+								<p>Upto 50%</p>
+							</figcaption>
+						</figure>
+					</div>
+					</a>
+		<div class="clearfix"></div>
+	</div>
+	</div>
+    </div> -->
+
+
+		<!--//contact-->
+		<!--/grids-->
+		<!-- <div class="coupons" >
+			 <div class="coupons-grids text-center">
+				 <div class="w3layouts_mail_grid">
+					 <div class="col-md-3 w3layouts_mail_grid_left" >
+						 <div class="w3layouts_mail_grid_left1 hvr-radial-out" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);" >
+							 <i class="fa fa-truck" aria-hidden="true"></i>
+						 </div>
+						 <div class="w3layouts_mail_grid_left2">
+							 <h3>FREE DELIVERY</h3>
+							 <p>Free delivery of Items Within Nairobi</p>
+						 </div>
+					 </div>
+					 <div class="col-md-3 w3layouts_mail_grid_left">
+						 <div class="w3layouts_mail_grid_left1 hvr-radial-out" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
+							 <i class="fa fa-headphones" aria-hidden="true"></i>
+						 </div>
+						 <div class="w3layouts_mail_grid_left2">
+							 <h3>24/7 SUPPORT</h3>
+							 <p> seamless support, provided 24 hours a day and 7 days a week.NO Downtime </p>
+						 </div>
+					 </div>
+					 <div class="col-md-3 w3layouts_mail_grid_left">
+						 <div class="w3layouts_mail_grid_left1 hvr-radial-out" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
+							 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+						 </div>
+						 <div class="w3layouts_mail_grid_left2" >
+							 <h3>DELIVERS WITHIN 48HRS </h3>
+							 <p>24-48 Hours Product, Delivery Time! Great everyday value for money </p>
+						 </div>
+					 </div>
+						 <div class="col-md-3 w3layouts_mail_grid_left">
+						 <div class="w3layouts_mail_grid_left1 hvr-radial-out" style=" box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);">
+							 <i class="fa fa-gift" aria-hidden="true"></i>
+						 </div>
+						 <div class="w3layouts_mail_grid_left2">
+							 <h3>FREE GIFT COUPONS</h3>
+							 <p>Free give aways to customers with coupon/promo code <strong>COMING SOON</strong></p>
+						 </div>
+					 </div>
+					 <div class="clearfix"> </div>
+				 </div>
+
+			 </div>
+		</div> -->
+		<!--grids-->
+		<!-- footer -->
+		<!-- <div class="footer">
+		 <div class="footer_agile_inner_info_w3l">
+			 <div class="col-md-3 footer-left">
+				 <h2><a href="index.html"><span>U </span>stawi</a></h2>
+				 <p>African curio | apparels | home decor | jewelry | etc
+					-we are an online curio shop find eveything african</p>
+				 <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+					<li><a href="https://web.facebook.com/Thecurioeffect/"  target=”_blank” class="facebook">
+						<div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+						<div  class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+				  <li><a href="https://twitter.com/CurioEffect" target=”_blank” class="twitter">
+						<div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+						<div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+				  <li><a href="https://www.instagram.com/curio_effect/?hl=en" target=”_blank” class="instagram">
+						<div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+						<div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+				  <li><a href="#" class="pinterest">
+						<div class="front"><i class="fa fa-linkedin" target=”_blank” aria-hidden="true"></i></div>
+						<div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+															 </ul>
+			 </div>
+			 <div class="col-md-9 footer-right">
+				 <div class="sign-grds">
+					 <div class="col-md-4 sign-gd">
+						 <h4>Our <span>Information</span> </h4>
+						 <ul>
+							 <li><a href="index.html">Home</a></li>
+							 <li><a href="mens.html">shop</a></li>
+							 <li><a href="womens.html">Men's Wear</a></li>
+							 <li><a href="about.html">Women's wear</a></li>
+							 <li><a href="typography.html">Home Accesories</a></li>
+							 <li><a href="contact.html">Contact</a></li>
+						 </ul>
+					 </div>
+
+					 <div class="col-md-5 sign-gd-two">
+						 <h4>Store <span>Information</span></h4>
+						 <div class="w3-address">
+							 <div class="w3-address-grid">
+								 <div class="w3-address-left">
+									 <i class="fa fa-phone" aria-hidden="true"></i>
+								 </div>
+								 <div class="w3-address-right">
+									 <h6>Phone Number</h6>
+									 <p>+254 726830125</p>
+								 </div>
+								 <div class="clearfix"> </div>
+							 </div>
+							 <div class="w3-address-grid">
+								 <div class="w3-address-left">
+									 <i class="fa fa-envelope" aria-hidden="true"></i>
+								 </div>
+								 <div class="w3-address-right">
+									 <h6>Email Address</h6>
+									 <p>Email :<a href="mailto:example@email.com"> info@curioeffect.com</a></p>
+								 </div>
+								 <div class="clearfix"> </div>
+							 </div>
+							 <div class="w3-address-grid">
+								 <div class="w3-address-left">
+									 <i class="fa fa-map-marker" aria-hidden="true"></i>
+								 </div>
+								 <div class="w3-address-right">
+									 <h6>Nairobi , KENYA</h6>
+									 <p>Greenfields,Nairobi, KENYA.
+
+									 </p>
+								 </div>
+								 <div class="clearfix"> </div>
+							 </div>
+						 </div>
+					 </div>
+					 <a href="{% url 'shop:home' %}" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+					 <div class="clearfix"></div>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+				 <div class="agile_newsletter_footer">
+				
+		 <div class="cell-xs-10 cell-md-12 cell-lg-4 tex-lg-right offset-top-15 offset-lg-top-0 ">
+				<p class="text-white-05">
+				 
+						Ustawi &#169;<span id="copyright-year"> </span> Design by <a href="http://www.brainlabs.co.ke/" target="_blank"> brain Labs
+					</a>
+				</p>
+			  </div>
+		 </div>
+		</div> -->
+		<!-- //footer -->
+<!-- 
+		<div class="container-fluid">
+				<h1 class="text-center mb-3">Bootstrap Multi-Card Carousel</h1>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner row w-100 mx-auto">
+						<div class="carousel-item col-md-4 active">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/f44242/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 1</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/418cf4/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 2</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/3ed846/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 3</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/42ebf4/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 4</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/f49b41/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 5</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/f4f141/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 6</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item col-md-4">
+							<div class="card">
+								<img class="card-img-top img-fluid" src="http://placehold.it/800x600/8e41f4/fff" alt="Card image cap">
+								<div class="card-body">
+									<h4 class="card-title">Card 7</h4>
+									<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div> -->
+	
+
+  {% endblock %}
+  

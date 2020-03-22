@@ -1,0 +1,31 @@
+
+
+{% load static %}
+
+
+{% block content %}
+
+<div>
+        {% for c in categories %}
+   <a href="{{ c.get_absolute_url }}">{{ c.name}}</a> 
+        {% endfor %}
+</div><br>
+<div>    
+
+        {% for sub in subcategories %}
+        <a href="{{ sub.get_absolute_url }}">{{ sub.name}}</a> 
+        {% endfor %}
+</div>
+<br>
+<div>    
+
+{% for mini in minicategories %}
+<a href="{{ mini.get_absolute_url }}">{{ mini.name}}</a> 
+{% endfor %}
+</div>
+
+
+    
+
+
+{%  endblock  %}

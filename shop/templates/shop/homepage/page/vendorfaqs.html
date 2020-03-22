@@ -1,0 +1,191 @@
+
+{% extends 'shop/homepage/base2.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+        <div class="container">
+          <div class="navbar-translate">
+            <a><img src="../../static/img/currioeffectlogowhite2.png " alt="" style="width:180px; height:100px "></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <i class="material-icons">apps</i> Components
+                </a>
+                <div class="dropdown-menu dropdown-with-icons">
+                  <a href="../presentation.html" class="dropdown-item">
+                    <i class="material-icons">layers</i> Presentation
+                  </a>
+                  <a href="../index.html" class="dropdown-item">
+                    <i class="material-icons">line_style</i> All Components
+                  </a>
+                  <a href="../docs/2.1/getting-started/introduction.html" class="dropdown-item">
+                    <i class="material-icons">content_paste</i> Documentation
+                  </a>
+                </div>
+              </li> -->
+             
+              <li class="button-container nav-item iframe-extern">
+                <a href="{% url 'shop:product_list' %}"  class="btn  btn-primary   btn-round btn-block">
+                   Shop
+                </a>
+              </li>
+              <li class="button-container nav-item iframe-extern">
+                    <a href="{% url 'shop:home' %}"  class="btn  btn-primary   btn-round btn-block">
+                       Shoppers FAQs
+                    </a>
+                  </li>
+          
+              <li class="button-container nav-item iframe-extern">
+                <a href="{% url 'shop:home' %}"  class="btn  btn-primary   btn-round btn-block">
+                  Back to home
+                </a>
+              </li>
+    
+           
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/bg8.jpg')">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="title">Frequently asked questions by other Vendors</h2>
+              <h4>If you can't find an answer to your question. Kindly don't hesitate to contact us here  <a href="{% url 'shop:Vendorfaqs' %}" >Contact us </h4>
+              <br>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main main-raised">
+        <div class="container">
+          <div class="section text-center">
+           
+             <!--                 collapse -->
+        <div id="collapse">
+                <div class="mtitle">
+                  <h3>Questions</h3>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="accordion" role="tablist">
+                      <div class="card card-collapse">
+                        <div class="card-header" role="tab" id="headingOne">
+                          <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Question #1
+                              <i class="material-icons">keyboard_arrow_down</i>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-collapse">
+                        <div class="card-header" role="tab" id="headingTwo">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Question #2
+                              <i class="material-icons">keyboard_arrow_down</i>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card card-collapse">
+                        <div class="card-header" role="tab" id="headingThree">
+                          <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Question #3
+                              <i class="material-icons">keyboard_arrow_down</i>
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--                 end collapse -->
+          </div>
+       
+          
+        </div>
+      </div>
+    
+
+
+
+              <footer class="footer footer-default">
+                    <div class="container">
+                      <nav class="float-left">
+                        <ul>
+                          <li>
+                            <a href="#">
+                             Facebook
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                             Twitter
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              IG
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              FAQs
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div class="copyright float-right">
+                        &copy;
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script> Curio effect Powered by
+                        <a href="http://www.brainlabs.co.ke" target="_blank">Brain labs Kenya</a> 
+                      </div>
+                    </div>
+                  </footer>             
+              {% endblock %}

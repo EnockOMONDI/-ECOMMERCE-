@@ -1,0 +1,37 @@
+<nav class="collapse">
+    <ul class="nav nav-pills" id="mainNav">
+             {%if category %}
+             {% for category in webcat %}
+                                    <li class="dropdown dropdown-mega">
+                                        <a class="dropdown-item dropdown-toggle" href="JavaScript:void()">
+                                            {{category}}
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            {% if category.websubcategory.all %}
+                                            <li>
+                                                <div class="dropdown-mega-content">
+                                                    <div class="row">
+                                                        {% for subcategory in category.websubcategory.all %}
+                                                        <div class="col-lg-3">
+                                                            <span class="dropdown-mega-sub-title">{{subcategory.name}}</span>
+                                                            {% for subchildcat in subcategory.subchild.all %}
+                                                            <ul class="dropdown-mega-sub-nav">
+                                                                <li><a class="dropdown-item" href="{% url 'show_page' subcategory.slug %}">{{subchildcat}}</a></li>
+                                                            </ul>
+                                                            {% endfor %}
+                                                        </div>
+                                            {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            {% else %}
+                                            <p>No category Found</p>
+                                            {% endif %}
+                                        </ul>
+                                    </li>
+            {% endfor %}
+            {% else %}
+            <p>No Category Found</p>
+            {% endif %}
+    </ul>
+  </nav>

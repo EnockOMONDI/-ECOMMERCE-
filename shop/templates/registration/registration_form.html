@@ -97,3 +97,83 @@
     </form>
     <div class="text-center">Already have an account? <a href="/accounts/login ">Login here</a></div>
 </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% block content %}
+
+<section class="containerlogin">
+<div class="container">
+  <br>
+  <div class="text-center">
+    <h1 style="font-family: 'Cookie', cursive;"><strong>
+      <img src="../../static/images/logincurio.png " alt="" style="width:750px; height:100px; box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3); ">
+    </strong></h1>
+  </div>
+  <hr>
+</div>
+<div class=" container ">
+<div class="row ">
+    
+    <div class="col-md-2 "></div>
+    <div class="col-md-4 ">
+      <img src="../../static/images/loginpng.jpg " alt="" style="width:250px; height:400px ">
+</div>
+
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      {% if form.errors %}
+        <p> Password or Username is incorrect </p>
+      {% endif %}
+      <div class="panel panel-default" style="box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.3);" >
+
+        <div class="panel-heading" style="background-color:#000">
+          <h5 class="text-center" style="color:#fff">Login using your social Accounts</h5>
+        </div>
+        <div class="social-btn text-center" >
+
+            <a href="/accounts/google/login" class="btn btn-danger btn-sm"><i class="fa fa-google"></i> Google</a>
+            <h6></h6> 
+            <p> <strong>or</strong> </p> -->
+           <!-- <a href="/accounts/twitter/" class="btn btn-info btn-sm"><i class="fa fa-twitter"></i> Twitter</a>
+           <a href="" class="btn btn-info btn-sm"><i class="fa fa-paypal"></i>Paypal</a>
+            <a href="/accounts/facebook/login" class="btn btn-primary btn-sm"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-amazon"></i>Amazon</a>
+            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-instagram"></i>Instagram</a> -->
+        <!-- <div class="panel-body"  >
+       <form  action="/accounts/login/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form%}
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-info btn-sm" style="background-color:#2fdab8"  value="Login">
+            </div>
+            <input type="hidden" name="next" value="{{next}}">
+          <div class="clearfix"></div>
+ 
+        <div class="panel-body">
+          <a href="/accounts/register " class="forgot ">Don't have an account? SignUp here.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>   
+  
+</section>
+
+{% endblock %} -->
+

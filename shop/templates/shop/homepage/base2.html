@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curio effect Uniquiely African made">
+    <meta name="keywords" content="kenya online shop, african funiture, unique funiture designs, african designs">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <title>{% block title %}Currio effect - Uniquely Made{% endblock %}</title>  <!--Curio On-line -->
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/u.png' %}"/>
+    <!-- <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/plugins.css">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/style.css?version=10.3">
+    <link type="text/css" rel="stylesheet" href="https://bbbootstrap.com/assets/css/color.css">
+  
+    <link rel="shortcut icon" href="https://i.imgur.com/msO7f5I.png">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1568904751/balloon.min.css">
+ -->
+
+  
+    <script src="https://bbbootstrap.com/assets/js/notify.js?v=1"></script>
+    <script src="https://bbbootstrap.com/assets/js/imgur.js?v=1"></script>
+
+    {% for local_css_url in local_css_urls %}
+    <link rel="stylesheet" href="{% static local_css_url %}">
+{% endfor %}
+
+
+
+   <!-- //for bootstrap working -->
+   <link href="https://fonts.googleapis.com/css?family=Caveat|Gloria+Hallelujah|Handlee|Modak|Nanum+Pen+Script|Roboto|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+    <script>
+        UPLOADCARE_PUBLIC_KEY = "4b92b91744f8fad64594";
+      </script>
+      <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.6.0/uploadcare.full.min.js"></script>
+</head>
+<body class="index-page sidebar-collapse">
+
+{% block content %}
+
+
+
+{% endblock %}
+<!--   Core JS Files   -->
+
+
+{% include 'shop/homepage/page/js.html' %}
+
+{% for local_js_url in local_js_urls %}
+<script src="{% static local_js_url %}"></script>
+{% endfor %}
+
+
+
+</body>
+</html>
+

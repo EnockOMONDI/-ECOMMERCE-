@@ -318,7 +318,7 @@ i.fa.fa-shopping-bag.top_logo_agile_bag {
 /*-- //header-bot --*/
 /*-- banner-top --*/
 .ban-top{
-	background:#000;
+	background:#212121!important;
     padding: 0px 0;
 }
 .dropdown-menu.columns-3 {
@@ -4342,7 +4342,7 @@ p.w3ls_para {
 		margin: 1em 0 0 0;
 	}
 	ul.multi-column-dropdown li a {
-		color: #fff;
+		color: rgb(163, 163, 163);
 	}
 	.multi-gd-img.multi-gd-text {
 		margin: 1em 0;
@@ -4350,7 +4350,7 @@ p.w3ls_para {
 	ul.dropdown-menu.agile_short_dropdown li {
 		border: none !important;
 		background: #fff;
-		color: #fff;
+		color: rgb(175, 174, 174);
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		color: #000;

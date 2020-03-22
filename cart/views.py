@@ -27,4 +27,27 @@ def cart_detail(request):
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(initial={'quantity': item['quantity'], 'update': True})
-    return render(request, 'cart/detail.html', {'cart': cart})
+    return render(request, 'cart/detail.html', {
+        'cart': cart,
+        'local_css_urls': ["css3/easy-responsive-tabs.css",
+                            "css3/material-kit.min1036.css",
+                            "css3/demo.css",
+                            "css3/vertical-nav.css"],
+        'local_js_urls': [ "core/jquery.min.js",
+                           "core/popper.min.js",
+                           "core/bootstrap-material-design.min.js",
+                           "js3/vertical-nav.js",
+                           "js3/material-kit.min1036.js",
+                           "js3/demo.js",
+                           "js3/buttons.js",
+                           "js3/modernizr.js",                         
+                           "js3/bootstrap.min.js",                           
+                           "js3/plugins/moment.min.js ",
+                           "js3/plugins/bootstrap-datetimepicker.js",
+                           "js3/plugins/jquery.flexisel.js",
+                           "js3/plugins/jquery.sharrre.js",
+                           "js3/plugins/nouislider.min.js",
+                           "js3/plugins/bootstrap-selectpicker.js",
+                           "js3/plugins/bootstrap-tagsinput.js",
+                           "js3/plugins/jasny-bootstrap.min.js"],
+    })
